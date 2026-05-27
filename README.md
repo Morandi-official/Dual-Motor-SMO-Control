@@ -1,4 +1,4 @@
-### Dual-Motor-SMO-Control v4.0
+# Dual-Motor-SMO-Control v4.0
 本仓库用于备份 `dual_axis_servo_drive_fcl_qep_f2837x` 双电机工程中，相对最初原始工程新增或修改过的代码文件。`v4.0/` 目录只放代码文件，不放 CCS 工程元数据 `.project`、编译产物或完整 SDK 工程副本。
 
 ## eSMO 切入滑模闭环的具体过程
