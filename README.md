@@ -40,6 +40,12 @@ motorVars[0].ptrFCL->lsw == ENC_CALIBRATION_DONE
 
 ## 代码更新日志与硬件实验迭代过程
 
+| 工况                       |   0.18pu 时 `iq` |     电源电流 |
+| ------------------------ | --------------: | -------: |
+| 被控电机空轴                   | `0.012~0.017pu` | `0.044A` |
+| 被控电机 + 转矩传感器             | `0.016~0.027pu` |  `0.06A` |
+| 被控电机 + 转矩传感器 + 另一台电机机械连接 | `0.295~0.311pu` | `1.018A` |
+
 1. 从单电机无感工程移植 `esmo.c/h`，新增双电机 eSMO adapter，保留 QEP 控制。
 2. 修复编译兼容问题：eSMO include path、`POSITION_FEEDBACK_*` 未定义、`MOTOR_Vars_t` 包含顺序、`FCL_Vars_t.positionFeedback` 与 SDK 原始结构体不兼容、CLA 不支持 `<stdlib.h>`。
 3. 根据电机参数 txt 修正相电阻、电感和基准量，避免 eSMO/FCL 基准量不匹配导致观测偏差、发热和停转。
