@@ -14,13 +14,25 @@ motorVars[0].ptrFCL->lsw == ENC_CALIBRATION_DONE
 
 当前 M1 切入流程：
 
-1. `ENC_ALIGNMENT`：对齐阶段，`IdRef_start=M1_STARTUP_ID_REF=0.20`，Iq 为 0。
-2. `ENC_WAIT_FOR_INDEX`：eSMO 开环牵引阶段。eSMO 模式下禁止 CLA 因 QEP index 自动切闭环。开环目标 `M1_ESMO_FORCE_SPEED=0.08 pu`，最少强拖时间 `M1_ESMO_FORCE_RUN_SEC=1.0 s`。
-3. 启动 Iq 控制：最大 `M1_STARTUP_IQ_REF=0.04 pu`。若 `esmoSpeedPu` 超过当前 `rc.SetpointValue`，`getSensorlessStartupIqRef()` 动态削弱 Iq，最低为 `0.04*0.10=0.004 pu`，超速带宽 `M1_STARTUP_OVERSPEED_BAND=0.03 pu`。
-4. 接管判断：强拖时间满足后，要求 `rc.SetpointValue>=0.07 pu`、`esmoSpeedPu>=0.03 pu`、`Eq_mag>=0.055 pu`，且速度方向一致。满足后同步 eSMO 角度并置 `lsw=ENC_CALIBRATION_DONE`。
-5. `ENC_CALIBRATION_DONE`：eSMO 提供电角度和速度，FCL Park 角度使用 `esmoAnglePu`，速度闭环接管 Iq。
+1. `ENC_ALIGNMENT`：对齐阶段，`IdRef_start=M1_STARTUP_ID_REF`，Iq 为 0。该阶段只建立一个确定的初始电角度，不使用 eSMO 闭环控制。
+2. `ENC_WAIT_FOR_INDEX`：eSMO 开环牵引阶段。eSMO 模式下禁止 CLA 因 QEP index 自动切闭环，CPU 侧继续用开环斜坡角 `rg.Out` 作为 FCL Park 角度，同时 eSMO 在旁路运行并积累反电动势、PLL 角度和速度估计。开环目标由 `M1_ESMO_FORCE_SPEED` 给定，最少强拖时间由 `M1_ESMO_FORCE_RUN_SEC` 给定。
+3. 启动 Iq 控制：`getSensorlessStartupIqRef()` 只在 `ENC_WAIT_FOR_INDEX` 阶段直接给 FCL 的 `pi_iq.ref`。当前逻辑先按 `M1_STARTUP_IQ_MIN_SCALE` 从较低 Iq 软启动，随后随 `esmoForceRunCntr` 逐步爬升到 `M1_STARTUP_IQ_REF`；若 `esmoSpeedPu` 已经超过当前 `rc.SetpointValue`，再按 `M1_STARTUP_OVERSPEED_BAND` 做超速削弱，避免开环牵引阶段过冲。
+4. 接管判断：强拖时间满足后，要求 `rc.SetpointValue>=M1_ESMO_TAKEOVER_MIN_SETPOINT`、`abs(esmoSpeedPu)>=M1_ESMO_TAKEOVER_MIN_SPEED`、`Eq_mag>=M1_ESMO_TAKEOVER_MIN_BEMF`，且 `rc.SetpointValue` 与 `esmoSpeedPu` 方向一致。满足后调用 `syncSensorlessEstimatorAngle()`，把 eSMO 内部角度同步到当前开环斜坡角附近，并置 `lsw=ENC_CALIBRATION_DONE`。
+5. 接管瞬间：`lsw` 置为 `ENC_CALIBRATION_DONE` 之后，FCL Park 角度来源切换为 `esmoAnglePu`，速度反馈切换为 `esmoSpeedPu`。同时调用 `seedSensorlessSpeedController()`，用切换前的启动 Iq 给速度 PI 的积分项做初值种入，避免 `pi_iq.ref` 在启动 Iq 与速度 PI 输出之间突跳。
+6. 接管过渡期：`isSensorlessTakeoverActive()` 并不是“是否已经进入 eSMO 闭环”的唯一判据，它表示 `lsw=ENC_CALIBRATION_DONE` 之后的一段角度混合期，长度由 `M1_ESMO_TAKEOVER_SEC` 决定。在这段时间里，`blendSensorlessAngle()` 按 `esmoTakeoverCntr/esmoTakeoverCntMax` 形成 `alpha`，把控制角度从开环斜坡角逐步混合到 eSMO 观测角：
 
-最近一次 M1 测试：切换点约 `rcSetpoint=0.0739 pu`、`speedFbk=0.0862 pu`、`Eq_mag=0.0593 pu`；稳态约 `speed.Speed=0.1006 pu`、`esmoSpeedPu=0.0972 pu`、`tripFlagDMC=0`。
+```c
+angleErrPu = wrapPuHalf(estimatorAnglePu - openLoopAnglePu);
+esmoAnglePu = normalizePu(openLoopAnglePu + alpha * angleErrPu);
+```
+
+这里的“角度混合”意思是：刚切入时 `alpha` 接近 0，控制角度仍接近开环斜坡角；随后 `alpha` 逐渐增大，控制角度平滑靠近 eSMO 角度；最后 `alpha=1`，控制角度完全由 eSMO 角度决定。这样做是为了避免 Park 角度从开环角突然跳到 eSMO 角度，引发 q 轴电流、转矩和转速突变。
+
+早期版本中，接管过渡期不仅用于角度混合，还在 `pi_iq.ref` 里继续使用 `getSensorlessStartupIqRef()`。因此即使 `lsw` 已经变成 `ENC_CALIBRATION_DONE`，约 `M1_ESMO_TAKEOVER_SEC` 秒内的 Iq 仍主要来自启动转矩逻辑，而不是正常速度 PI。0.2pu 实验中出现的多次 `piIqRef_q15=3276`，就是这一逻辑导致的 `IqRef=0.10pu` 启动转矩反复参与，而不是协同控制器或普通速度 PI 本身过强。当前版本已将这两件事拆开：接管过渡期只继续做角度混合，Iq 则在切入后交给 eSMO 专用速度 PI 调节。
+
+7. `ENC_CALIBRATION_DONE` 稳态：eSMO 提供电角度和速度，FCL Park 角度使用 `esmoAnglePu`，速度闭环输出 `pid_spd.term.Out` 作为 Iq 主指令。eSMO 模式下速度 PI 使用较保守的 `M*_ESMO_SPEED_PID_KP/KI`，目的是降低 `esmoSpeedPu` 波动被速度环放大成 Iq 波动的程度；QEP 模式仍保留原速度 PI 参数。
+
+最近一次 0.2pu 启动日志显示：切换点约在 `esmoStartupLog[49]`，`rcSetpoint≈0.0726 pu`、`esmoSpeed≈0.0877 pu`、`Eq_mag≈0.0516 pu`；启动峰值 `esmoStartupPeakSpeedPu≈0.223 pu`、`esmoStartupPeakIqRef=0.10 pu`、`esmoStartupPeakIqFbk≈0.194 pu`。该数据说明软启动已经降低了电源启动电流，但切入后的 Iq 过渡仍需要从“启动转矩保持”改为“速度 PI 接管并用积分初值平滑衔接”。
 
 ## 代码文件修改说明
 
