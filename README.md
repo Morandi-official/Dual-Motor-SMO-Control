@@ -152,9 +152,9 @@ v6.0 当前状态：M1/M2 均默认 `POSITION_FEEDBACK_ESMO`，启动 Iq 已由�
 4. 在 QEP 参考速度改为 `SPEED_MEAS_QEP` 滤波链路之前，`qepSpeed_q15` 的短窗口波动包含明显计数量化成分，不应作为高精度速度真值。v6.0 已在代码中修正该诊断链路，下一轮实验应基于新的 QEP 参考速度再次记录 `0.10/0.15/0.20pu` 数据。
 5. 当前阶段不建议立即调大或调小 `Kslide`、PLL 增益等 eSMO 本体参数。下一步应先用 v6.0 的滤波 QEP 速度诊断链路复测，确认角度误差均值的重复性和速度相关性，再决定是调整 `M*_ESMO_ANGLE_OFFSET_PU`、角度延迟补偿，还是继续优化滑模/PLL 参数。
 
-![0.20pu speed tracking](figures/v6.0/0.20pu_short_window/Fig1_02pu_short_window_speed_tracking.png)
-![0.20pu speed error](figures/v6.0/0.20pu_short_window/Fig2_02pu_short_window_speed_error.png)
-![0.20pu angle comparison](figures/v6.0/0.20pu_short_window/Fig3_02pu_short_window_angle_comparison.png)
-![0.20pu angle error](figures/v6.0/0.20pu_short_window/Fig4_02pu_short_window_angle_error.png)
-![0.20pu q-axis current](figures/v6.0/0.20pu_short_window/Fig5_02pu_short_window_iq.png)
-![0.20pu observer quality](figures/v6.0/0.20pu_short_window/Fig6_02pu_short_window_observer_quality.png)
+![0.10/0.15/0.20pu speed tracking](figures/v6.0/three_speed_short_window/Fig1_three_speed_short_window_speed_tracking.png)
+![0.10/0.15/0.20pu speed error](figures/v6.0/three_speed_short_window/Fig2_three_speed_short_window_speed_error.png)
+![0.10/0.15/0.20pu angle comparison](figures/v6.0/three_speed_short_window/Fig3_three_speed_short_window_angle_comparison.png)
+![0.10/0.15/0.20pu angle error](figures/v6.0/three_speed_short_window/Fig4_three_speed_short_window_angle_error.png)
+![0.10/0.15/0.20pu q-axis current](figures/v6.0/three_speed_short_window/Fig5_three_speed_short_window_iq.png)
+![0.10/0.15/0.20pu observer quality](figures/v6.0/three_speed_short_window/Fig6_three_speed_short_window_observer_quality.png)
