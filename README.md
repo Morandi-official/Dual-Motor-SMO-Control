@@ -70,6 +70,14 @@ v6.0 当前状态：M1/M2 均默认 `POSITION_FEEDBACK_ESMO`，启动 Iq 已由�
 - `sources/dual_axis_servo_drive.c`：接管后的 Iq 逻辑保持由速度 PI 接管，并通过 `limitSensorlessTakeoverIqRef()` 做接管期限幅，避免早期版本中 `lsw=ENC_CALIBRATION_DONE` 后仍长时间使用启动转矩导致速度猛冲。
 - 其余 v4.0/v5.0 中移植 eSMO、扩展 FCL 结构体、保护 CLA QEP index、保留 QEP/eSMO/eSMO monitor 选择等基础改动继续保留。
 
+### v5.9（2026-06-04 提交，版本回退备份）
+
+本次只作为 v6.0 的稳定性原因回退备份，不新增硬件调试记录。
+
+- `sources/dual_axis_servo_drive.c`：相对 v6.0 仅撤回一处 QEP 旁路速度诊断链路修改。v6.0 中新增的独立 `SPEED_MEAS_QEP esmoQepSpeedForCompare[2]` 与 `runSpeedFR(pQepSpeed)` 用于改善 `esmoCompareLog[].qepSpeed_q15` 参考速度，但实测会导致 M2 启动阶段触发 `motorVars[1].tripFlagDMC=1`，因此 v5.9 恢复为此前稳定版本使用的 `esmoQepAnglePrevPu[] + angleDelta/(baseFreq*Ts)` 单周期角度差分测速。
+- 该回退只影响 eSMO/QEP 对比日志中的 QEP 参考速度诊断路径，不改变 eSMO 闭环控制、启动 Iq、接管判据、角度混合、速度 PI、协同 PI 或 FCL 主控制逻辑。
+- 其余 v6.0 代码文件保持不变，`v5.9/` 作为当前可运行稳定版本的代码备份目录。
+
 ## 代码更新日志与硬件实验迭代过程
 
 ### v4.0（2026-05-27 提交）
@@ -159,10 +167,4 @@ v6.0 当前状态：M1/M2 均默认 `POSITION_FEEDBACK_ESMO`，启动 Iq 已由�
 ![0.10/0.15/0.20pu q-axis current](figures/v6.0/three_speed_short_window/Fig5_three_speed_short_window_iq.png)
 ![0.10/0.15/0.20pu observer quality](figures/v6.0/three_speed_short_window/Fig6_three_speed_short_window_observer_quality.png)
 
-### v5.9（2026-06-04 提交，版本回退备份）
 
-本次只作为 v6.0 的稳定性原因回退备份，不新增硬件调试记录。
-
-- `sources/dual_axis_servo_drive.c`：相对 v6.0 仅撤回一处 QEP 旁路速度诊断链路修改。v6.0 中新增的独立 `SPEED_MEAS_QEP esmoQepSpeedForCompare[2]` 与 `runSpeedFR(pQepSpeed)` 用于改善 `esmoCompareLog[].qepSpeed_q15` 参考速度，但实测会导致 M2 启动阶段触发 `motorVars[1].tripFlagDMC=1`，因此 v5.9 恢复为此前稳定版本使用的 `esmoQepAnglePrevPu[] + angleDelta/(baseFreq*Ts)` 单周期角度差分测速。
-- 该回退只影响 eSMO/QEP 对比日志中的 QEP 参考速度诊断路径，不改变 eSMO 闭环控制、启动 Iq、接管判据、角度混合、速度 PI、协同 PI 或 FCL 主控制逻辑。
-- 其余 v6.0 代码文件保持不变，`v5.9/` 作为当前可运行稳定版本的代码备份目录。
