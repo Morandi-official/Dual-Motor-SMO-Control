@@ -1,5 +1,5 @@
 # Dual-Motor-SMO-Control
-本仓库用于备份 `dual_axis_servo_drive_fcl_qep_f2837x` 双电机工程中，相对最初原始工程新增或修改过的代码文件。`v4.0/`、`v5.0/`、`v6.0/` 等版本目录只放代码文件，不放 CCS 工程元数据 `.project`、编译产物或完整 SDK 工程副本。
+本仓库用于备份 `dual_axis_servo_drive_fcl_qep_f2837x` 双电机工程中，相对最初原始工程新增或修改过的代码文件。`v4.0/`、`v5.0/`、`v6.0/`、`v7.0/` 等版本目录只放代码文件，不放 CCS 工程元数据 `.project`、编译产物或完整 SDK 工程副本。
 
 ## eSMO 切入滑模闭环的具体过程
 
@@ -33,6 +33,8 @@ esmoAnglePu = normalizePu(openLoopAnglePu + alpha * angleErrPu);
 7. `ENC_CALIBRATION_DONE` 稳态：eSMO 提供电角度和速度，FCL Park 角度使用 `esmoAnglePu`，速度闭环输出 `pid_spd.term.Out` 作为 Iq 主指令。eSMO 模式下速度 PI 使用较保守的 `M*_ESMO_SPEED_PID_KP/KI`，目的是降低 `esmoSpeedPu` 波动被速度环放大成 Iq 波动的程度；QEP 模式仍保留原速度 PI 参数。
 
 v6.0 当前状态：M1/M2 均默认 `POSITION_FEEDBACK_ESMO`，启动 Iq 已由完整台架早期测试所需的 `0.10 pu` 下调到 `0.07 pu`，`M*_STARTUP_IQ_MIN_SCALE` 保持 `0.20`，以降低双电机同电源启动时的峰值电流。`esmoStartupLog[]` 为节省 RAM 暂时关闭，新增的 `esmoCompareLog[]` 只用于 eSMO 与 QEP 旁路参考的观测质量评估，不参与 FCL 角度、速度 PI、Iq 指令、接管判据或协同控制器。
+
+v7.0 当前状态：eSMO 闭环控制逻辑继续保持不变，`esmoCompareLog[]` 的用途进一步收敛为“验证 eSMO final angle 与 QEP 参考角是否处在同一 FOC 电角度零位”。本版本重点修正 QEP 旁路参考角的零位定义：不再把物理 index 位置强行作为 QEP 角度零点，而是恢复原始 FCL/QEP 思路，由 alignment 建立 FOC 零位，index 只用于保持该零位。
 
 ## 代码文件修改说明
 
@@ -70,13 +72,13 @@ v6.0 当前状态：M1/M2 均默认 `POSITION_FEEDBACK_ESMO`，启动 Iq 已由�
 - `sources/dual_axis_servo_drive.c`：接管后的 Iq 逻辑保持由速度 PI 接管，并通过 `limitSensorlessTakeoverIqRef()` 做接管期限幅，避免早期版本中 `lsw=ENC_CALIBRATION_DONE` 后仍长时间使用启动转矩导致速度猛冲。
 - 其余 v4.0/v5.0 中移植 eSMO、扩展 FCL 结构体、保护 CLA QEP index、保留 QEP/eSMO/eSMO monitor 选择等基础改动继续保留。
 
-### v5.9（2026-06-04 提交，版本回退备份）
+### v7.0（2026-06-07 提交）
 
-本次只作为 v6.0 的稳定性原因回退备份，不新增硬件调试记录。
-
-- `sources/dual_axis_servo_drive.c`：相对 v6.0 仅撤回一处 QEP 旁路速度诊断链路修改。v6.0 中新增的独立 `SPEED_MEAS_QEP esmoQepSpeedForCompare[2]` 与 `runSpeedFR(pQepSpeed)` 用于改善 `esmoCompareLog[].qepSpeed_q15` 参考速度，但实测会导致 M2 启动阶段触发 `motorVars[1].tripFlagDMC=1`，因此 v5.9 恢复为此前稳定版本使用的 `esmoQepAnglePrevPu[] + angleDelta/(baseFreq*Ts)` 单周期角度差分测速。
-- 该回退只影响 eSMO/QEP 对比日志中的 QEP 参考速度诊断路径，不改变 eSMO 闭环控制、启动 Iq、接管判据、角度混合、速度 PI、协同 PI 或 FCL 主控制逻辑。
-- 其余 v6.0 代码文件保持不变，`v5.9/` 作为当前可运行稳定版本的代码备份目录。
+- `sources/dual_axis_servo_drive.c`：修正 eSMO/QEP 对比诊断中的 QEP index 零位处理。此前诊断链路把 QEP 物理 index 位置作为 `qepAngle_q15` 的零点，这会让 QEP 旁路角度和 eSMO final angle 使用不同零位；v7.0 改为匹配原始 FCL/QEP 校准约定：alignment 建立 FOC 电角度零位，index 捕获后只写入 `QPOSINIT = indexCount`，不再强行改写 `QPOSCNT` 为物理 index 零。
+- `sources/dual_axis_servo_drive.c`：保留 `thetaPllRaw_q15`、`thetaDelayComp_q15`、`thetaAfterDelay_q15`、`esmoAngle_q15`、`qepAngle_q15`、`rawAngleErr_q15`、`afterDelayErr_q15`、`angleErr_q15` 等分段诊断字段，用于区分 PLL 原始角、delay 补偿角、final 控制角分别相对 QEP FOC 零位参考的误差来源。
+- `sources/dual_axis_servo_drive.c`：`esmoCompareLog[]` 仍只作为旁路诊断，不参与 FCL Park 角度、eSMO 速度闭环、Iq 指令、接管判据、角度混合或协同控制；本次零位修正不改变已经调好的 eSMO 闭环控制架构。
+- `dual_axis_servo_drive_fcl_qep_f2837x/eSMO_QEP_compare_data_notes.txt`（项目内说明文件，未作为代码目录备份）：同步更新 QEP index reference 说明，明确 `qepAngle_q15` 应理解为 FOC 零位下的 QEP 电角度参考，而不是物理 index 零位角。
+- 其余 v6.0/v5.9 中 eSMO 移植、启动 Iq、接管逻辑、速度 PI、协同 PI 和 FCL 结构体扩展继续保留；`v7.0/` 目录只备份相对原始工程改过的 14 个代码文件。
 
 ## 代码更新日志与硬件实验迭代过程
 
@@ -167,4 +169,20 @@ v6.0 当前状态：M1/M2 均默认 `POSITION_FEEDBACK_ESMO`，启动 Iq 已由�
 ![0.10/0.15/0.20pu q-axis current](figures/v6.0/three_speed_short_window/Fig5_three_speed_short_window_iq.png)
 ![0.10/0.15/0.20pu observer quality](figures/v6.0/three_speed_short_window/Fig6_three_speed_short_window_observer_quality.png)
 
+### v5.9（2026-06-04 提交，版本回退备份）
 
+本次只作为 v6.0 的稳定性原因回退备份，不新增硬件调试记录。
+
+- `sources/dual_axis_servo_drive.c`：相对 v6.0 仅撤回一处 QEP 旁路速度诊断链路修改。v6.0 中新增的独立 `SPEED_MEAS_QEP esmoQepSpeedForCompare[2]` 与 `runSpeedFR(pQepSpeed)` 用于改善 `esmoCompareLog[].qepSpeed_q15` 参考速度，但实测会导致 M2 启动阶段触发 `motorVars[1].tripFlagDMC=1`，因此 v5.9 恢复为此前稳定版本使用的 `esmoQepAnglePrevPu[] + angleDelta/(baseFreq*Ts)` 单周期角度差分测速。
+- 该回退只影响 eSMO/QEP 对比日志中的 QEP 参考速度诊断路径，不改变 eSMO 闭环控制、启动 Iq、接管判据、角度混合、速度 PI、协同 PI 或 FCL 主控制逻辑。
+- 其余 v6.0 代码文件保持不变，`v5.9/` 作为当前可运行稳定版本的代码备份目录。
+
+### v7.0（2026-06-07 提交）
+
+1. 本阶段从“eSMO/QEP 稳态角度误差不符合物理直觉”开始。早期短窗口数据中，`rawAngleErr` 与 `afterDelayErr` 约为 `+100°~+120°`，而 `final angleErr` 约为 `-20°~-40°`；同时 `afterDelayErr - final angleErr` 几乎恒定，约 `144°`。这个特征不像 Kslide、PLL 或 delaySF 造成的随机观测误差，更像两个角度坐标系之间存在固定零位变换。
+2. 进一步分析角度链路后确认，eSMO final angle 是 `thetaPLL + speed delay compensation - esmoAngleOffsetPu` 后实际给 FCL Park 使用的控制角；而当时 QEP 旁路角度被改成了“物理 index 为零”的角度。物理 index 零位并不天然等于电机 d 轴磁链零位、FOC 电角度零位或 eSMO final angle 零位，所以直接用该角度做 `eSMO - QEP` 会把零位差误判为滑模观测误差。
+3. 回看原始 QEP/FCL 工程后，确认原始流程不是把物理 index 当作 FOC 零点，而是 alignment 先建立 FOC 电角度零位，index 只用于后续重新装载并保持该零位。因此 v7.0 将 QEP 旁路参考恢复到这一约定：首次捕获 index 后保存 `indexCount` 到 `QPOSINIT`，不再重写 `QPOSCNT` 让物理 index 变成 0。
+4. 修改后继续使用 `POSITION_FEEDBACK_ESMO` 闭环控制，QEP 只作为旁路参考。0.2pu 稳态短窗口 96 点数据中，`angleErr_q15` 均值由此前几十度级别下降到约 `-0.94°`，去均值 RMS 约 `0.61°`，峰峰值约 `2.69°`；`esmoSpeed_q15` 均值约 `0.20003pu`，`qepSpeed_q15` 均值约 `0.20007pu`。
+5. 0.5pu 稳态短窗口测试由于后段数组没有完整复制，仅有 71 点，但仍显示同一趋势：`angleErr_q15` 均值约 `-1.46°`，去均值 RMS 约 `0.81°`，峰峰值约 `2.79°`；`esmoSpeed_q15` 均值约 `0.49926pu`，`qepSpeed_q15` 均值约 `0.50001pu`。
+6. 上述结果说明，原先 `-20°~-40°` 的 final angle error 主要来自 QEP 参考角零位定义不一致，而不是 eSMO 观测器本体存在同等幅度的真实角度误差。v7.0 后，`esmoAngle_q15 - qepAngle_q15` 才开始接近“eSMO final angle 相对 QEP FOC 零位参考角”的真实误差，可用于后续滑模观测性能评估。
+7. 后续建议在不改变 eSMO 控制逻辑的前提下，补测 `0.10/0.30/0.50pu` 稳态短窗口，尤其 0.5pu 需要完整 96 点。若各速度下 final angle error 均值维持在约 `±2°` 内、去均值 RMS 约 `1°` 内，则可以把“QEP 参考零位统一”阶段收束，进入真正的 eSMO 参数与性能指标优化阶段。
