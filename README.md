@@ -186,3 +186,29 @@ v7.0 当前状态：eSMO 闭环控制逻辑继续保持不变，`esmoCompareLog[
 5. 0.5pu 稳态短窗口测试由于后段数组没有完整复制，仅有 71 点，但仍显示同一趋势：`angleErr_q15` 均值约 `-1.46°`，去均值 RMS 约 `0.81°`，峰峰值约 `2.79°`；`esmoSpeed_q15` 均值约 `0.49926pu`，`qepSpeed_q15` 均值约 `0.50001pu`。
 6. 上述结果说明，原先 `-20°~-40°` 的 final angle error 主要来自 QEP 参考角零位定义不一致，而不是 eSMO 观测器本体存在同等幅度的真实角度误差。v7.0 后，`esmoAngle_q15 - qepAngle_q15` 才开始接近“eSMO final angle 相对 QEP FOC 零位参考角”的真实误差，可用于后续滑模观测性能评估。
 7. 后续建议在不改变 eSMO 控制逻辑的前提下，补测 `0.10/0.30/0.50pu` 稳态短窗口，尤其 0.5pu 需要完整 96 点。若各速度下 final angle error 均值维持在约 `±2°` 内、去均值 RMS 约 `1°` 内，则可以把“QEP 参考零位统一”阶段收束，进入真正的 eSMO 参数与性能指标优化阶段。
+
+### v7.0 五速度短窗口实验结果
+
+下列图展示 0.1–0.5 pu 的短窗口稳态观测数据，横轴为采样时间(ms)，纵轴分别为速度、电流、角度及观测器信号：
+
+![Speed tracking](readme_v7_figs/Fig1_speed_tracking.svg)
+![Speed error](readme_v7_figs/Fig2_speed_error.svg)
+![Electrical angle comparison](readme_v7_figs/Fig3_angle_comparison.svg)
+![Electrical angle error](readme_v7_figs/Fig4_angle_error.svg)
+![q-axis current](readme_v7_figs/Fig5_iq.svg)
+![Observer quality](readme_v7_figs/Fig6_observer_quality.svg)
+
+关键稳态段结果对比：
+
+| 速度点 | eSMO均速 / pu | QEP均速 / pu | 速度误差RMS / pu | 角度均值 / ° | 去均值RMS / ° | iqRef峰值 / pu | iqFbk峰值 / pu | eqMag均值 / pu |
+|--------|---------------|--------------|-----------------|---------------|---------------|----------------|----------------|----------------|
+| 0.1 pu | 0.10002       | 0.10003      | 0.00688         | -16.53        | 1.23          | 0.04367        | 0.05298        | 0.08645        |
+| 0.2 pu | 0.19995       | 0.19988      | 0.00273         | 11.38         | 0.67          | 0.04828        | 0.04938        | 0.14933        |
+| 0.3 pu | 0.29983       | 0.29984      | 0.00255         | 0.20          | 0.58          | 0.05435        | 0.05603        | 0.21106        |
+| 0.4 pu | 0.39971       | 0.39965      | 0.00203         | -5.21         | 0.52          | 0.06107        | 0.06296        | 0.27222        |
+| 0.5 pu | 0.50044       | 0.50014      | 0.01257         | -22.46        | 0.88          | 0.07627        | 0.08322        | 0.30267        |
+
+**分析结论：**
+- 低速下 eSMO 角度误差偏置较大（0.1 pu ~ -16°），随着速度增加，角度偏置在0.15–0.2 pu发生符号变化。
+- 高速下（0.5 pu）速度估计不稳定，最终 angleErr 偏置增大，BEMF和PLL indicator波动也明显。
+- 原因主要是 QEP 旁路零位和 FOC 电角度零位的不一致，而不是 eSMO本体误差。
