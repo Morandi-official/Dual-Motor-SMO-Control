@@ -191,17 +191,17 @@ v7.0 当前状态：eSMO 闭环控制逻辑继续保持不变，`esmoCompareLog[
 
 下列图展示 0.1–0.5 pu 的短窗口稳态观测数据。每组数据为 96 点，记录时长 0.192 s，采样频率为 500 Hz。横轴为采样时间 ms，纵轴分别为速度、速度误差、电角度、电角度误差、q 轴电流以及观测器信号。
 
-![Speed tracking](figures/v7.0/five_speed_short_window/Fig1_speed_tracking.png)
+![Speed tracking](figures/v7.0/Fig1_speed_tracking.png)
 
-![Speed error](figures/v7.0/five_speed_short_window/Fig2_speed_error.png)
+![Speed error](figures/v7.0/Fig2_speed_error.png)
 
-![Electrical angle comparison](figures/v7.0/five_speed_short_window/Fig3_angle_comparison.png)
+![Electrical angle comparison](figures/v7.0/Fig3_angle_comparison.png)
 
-![Electrical angle error](figures/v7.0/five_speed_short_window/Fig4_angle_error.png)
+![Electrical angle error](figures/v7.0/Fig4_angle_error.png)
 
-![q-axis current](figures/v7.0/five_speed_short_window/Fig5_iq.png)
+![q-axis current](figures/v7.0/Fig5_iq.png)
 
-![Observer quality](figures/v7.0/five_speed_short_window/Fig6_observer_quality.png)
+![Observer quality](figures/v7.0/Fig6_observer_quality.png)
 
 关键稳态段结果对比：
 
