@@ -38,6 +38,62 @@ v7.0 当前状态：eSMO 闭环控制逻辑继续保持不变，`esmoCompareLog[
 
 ## 代码文件修改说明
 
+### v9.0（2026-06-23 提交）：0.2–0.9 pu 全电角度误差验证
+
+v9.0 以 2026-06-22 稳定工程为启动和接管基线，保留已通过台架验证的 0.9 pu 高速运行能力，重点完成 eSMO 最终控制角相对 QEP FOC 参考角的速度分段偏置校正。本版本不使用随电角度变化的谐波补偿：96 点数据表明误差的角度周期纹波很小，主要矛盾是不同转速下的直流偏置。
+
+本版本的主要代码变化如下：
+
+| 代码区域 | v9.0 修改说明 |
+| --- | --- |
+| `sources/dual_axis_servo_drive.c` | 保留稳定的双电机启动、eSMO 接管和速度 PI 路径；加入可观测的 d/q 轴 PI 限幅、电压利用率与越限诊断；将 96 点 `esmoCompareLog[]` 收敛为稳态短窗口验证日志。 |
+| `sources/dual_axis_servo_drive_sensorless.c` | 保留高速 PLL Kp 分段增益；默认关闭在 0.9 pu 造成约 27° 过补偿的 `thetaErr` 前馈；根据 0.2–0.9 pu 完整电角度日志更新速度分段偏置表。 |
+| `include/dual_axis_servo_drive_sensorless.h` | 保留高速相位补偿诊断量的 Watch 接口，便于后续对照实验。 |
+| `solutions/.../dual_axis_f2837x_ram_lnk_cpu1.cmd` | 将 `ESMO_COMPARE_LOG_DATA` 独立放入 `RAMGS6`，避免 96 点日志挤占 LS RAM；同时通过零初值数据归入 `.bss` 解决 `.data` 超过 `0x800` 的链接错误。 |
+
+#### 实验方法
+
+- 对象：电机 0，正转稳态 `POSITION_FEEDBACK_ESMO` 闭环，QEP 仅作为 FOC 零位下的旁路参考。
+- 转速：`0.2/0.3/0.4/0.5/0.6/0.7/0.8/0.9 pu`。
+- 采样：每组 500 Hz、96 点，窗口长度 0.192 s；八份 BIN 均为 3264 byte，全程 `lsw=ENC_CALIBRATION_DONE`。
+- 验收指标：每个速度下 `max(abs(eSMO angle - QEP angle)) <= 10 electrical degrees`。
+- 边界：本结论适用于当前台架、正转和本次温度/负载条件；反转、负载阶跃与长时温升属于后续鲁棒性验证。
+
+#### 全电角度验证结果
+
+| 速度 | 误差范围 / 电角度 | 均值 / 电角度 | 去均值 RMS / 电角度 | 最大绝对误差 / 电角度 |
+| ---: | ---: | ---: | ---: | ---: |
+| 0.2 pu | -1.08° – +2.18° | +0.56° | 0.69° | 2.18° |
+| 0.3 pu | -3.76° – -1.79° | -2.69° | 0.53° | 3.76° |
+| 0.4 pu | -0.75° – +0.90° | +0.13° | 0.44° | 0.90° |
+| 0.5 pu | +0.69° – +2.47° | +1.62° | 0.51° | 2.47° |
+| 0.6 pu | -0.76° – +1.31° | +0.09° | 0.48° | 1.31° |
+| 0.7 pu | +0.89° – +2.70° | +1.71° | 0.43° | 2.70° |
+| 0.8 pu | -0.32° – +1.36° | +0.49° | 0.49° | 1.36° |
+| 0.9 pu | -5.10° – -3.50° | -4.39° | 0.46° | **5.10°** |
+
+八个速度的最坏结果为 0.9 pu 下 `5.10°`，相对 `10°` 限值仍有约 `4.90°` 余量；所有速度的去均值角度纹波 RMS 为 `0.43°–0.69°`。因此，v9.0 在本次试验条件下完成了“0.2–0.9 pu 全电角度范围估计误差不超过 10°”的阶段目标。
+
+#### 性能图表
+
+下列图片为用户提供的 SCI 风格原图，在仓库中按原文件保存，未重新绘制。完整分析页见 [`eSMO_report.html`](figures/v9.0/2026-06-23_full_angle_validation/eSMO_report.html)。
+
+![v9.0 steady-state speed tracking](figures/v9.0/2026-06-23_full_angle_validation/fig1_speed_tracking.png)
+
+![v9.0 rotor-position estimation error](figures/v9.0/2026-06-23_full_angle_validation/fig2_angle_error.png)
+
+![v9.0 position-estimation accuracy summary](figures/v9.0/2026-06-23_full_angle_validation/fig3_angle_summary.png)
+
+![v9.0 dq-current regulation](figures/v9.0/2026-06-23_full_angle_validation/fig4_current.png)
+
+![v9.0 voltage utilisation](figures/v9.0/2026-06-23_full_angle_validation/fig5_voltage.png)
+
+![v9.0 wide-speed-range summary](figures/v9.0/2026-06-23_full_angle_validation/fig6_summary.png)
+
+> **固件字段核对说明：** HTML 中部分通道名称由波形反推，与 v9.0 固件 `ESMO_CompareLog_t` 的确定定义存在差异。固件中 ch6 为 `esmoSpeed_q15`、ch7 为 `qepSpeed_q15`，因此图 1 的 QEP/eSMO 图例需反向理解；ch13 为 d/q PI 限幅归一化使用量的平方和 `piUseSq`，不是单独 q 轴物理调制率；ch15 为 `Eq_mag`，ch16 为 `thetaErr`，因此图 6(c) 不作为反电动势线性结论的依据。图 2/3 的角度误差结论与图 4 的电流跟踪结论不受此标注差异影响。
+
+原始 BIN、用户提供的 6 张 PNG、HTML 分析、图注说明和汇总 CSV 均位于 [`figures/v9.0/2026-06-23_full_angle_validation/`](figures/v9.0/2026-06-23_full_angle_validation/)。
+
 ### v8.0，2026-06-13 提交
 
 本版本是在 v7.0 零位统一与 eSMO/QEP 对比诊断链路基础上，合入用户在 2026-06-13 手动调通后的稳定版本。备份仍遵循“只保留相对原始工程改动过的代码文件”的规则，目录结构沿用 v7.0，并用当前镜像工程中的同路径代码刷新。
