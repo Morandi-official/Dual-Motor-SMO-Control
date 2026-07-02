@@ -355,5 +355,5 @@ v8.0 之后，硬件调试进入高速性能和全电角度精度优化阶段。
 
 v9.0 在当前台架、正转和本次温度/负载条件下，已完成“0.2–0.9 pu 全电角度范围估计误差不超过 10°”的阶段目标。该结论尚不代表已完成全工况鲁棒性验证；反转、负载阶跃、多次重复启停、冷热机和长时温升属于下一阶段。
 
-原始 BIN、用户提供的 6 张 PNG、HTML 分析、图注说明和汇总 CSV 均位于 [`figures/v9.0/2026-06-23_full_angle_validation/`](figures/v9.0/2026-06-23_full_angle_validation/)。
+原始 BIN、上传的 6 张 PNG、HTML 分析、图注说明和汇总 CSV 均位于 [`figures/v9.0/2026-06-23_full_angle_validation/`](figures/v9.0/2026-06-23_full_angle_validation/)。
 
