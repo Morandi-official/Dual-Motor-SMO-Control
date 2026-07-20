@@ -400,4 +400,466 @@ void initSensorlessEstimator(MOTOR_Vars_t *pMotor)
     ESMO_Handle esmoHandle;
     uint16_t motorIdx = (pMotor == &motorVars[0]) ? 0U : 1U;
 
-    esmoHandle = ESMO_iniæÚ$z{-®éÜj×÷F÷$–G…ÒÂ6—¦Vöb„U4Ôõôö&¢’“°¢Ö÷F÷"ÓæW6Öô†æFÆRÒ‡fö–B¢–W6Öô†æFÆS° ¢6öæf–wW&U6Vç6÷&ÆW75&×2‡Ö÷F÷"ÂÖ÷F÷$–G‚“° ¢&WGW&ã°§Ð §fö–B&W6WE6Vç6÷&ÆW74W7F–ÖF÷"„ÔõDõ%õf'5÷B§Ö÷F÷"§°¢U4Ôõô†æFÆRW6Öô†æFÆRÒ„U4Ôõô†æFÆR—Ö÷F÷"ÓæW6Öô†æFÆS° ¢Ö÷F÷"ÓæW6Öôf÷&6U'Vä6çG"Ò°¢Ö÷F÷"ÓæW6ÖõF¶V÷fW$6çG"Ò°¢Ö÷F÷"ÓæW6ÖôævÆURÒãc°¢Ö÷F÷"ÓæW6ÖôævÆU&BÒãc°¢Ö÷F÷"ÓæW6Öõ&tævÆURÒãc°¢Ö÷F÷"ÓæW6Öõ7VVERÒãc°¢Ö÷F÷"ÓæW6Öõ7VVD‡¢Òãc°¢Ö÷F÷"ÓæW6ÖõWævÆURÒãc°¢Ö÷F÷"ÓæW6ÖôævÆTW'%RÒãc°¢Ö÷F÷"ÓæW6Öõ7VVDW'%RÒãc° ¢òò6ÆV"F†RÆ÷72ÖöbÖÆö6²ÆF6‚6òV6‚'Vâ7F'G2g&W6€¢W6ÖôÆ÷7DÆö6µ²‡Ö÷F÷"ÓÒfÖ÷F÷%f'5³Ò’òR¢UÒÒS°¢W6ÖôÆö6´&D6çG%²‡Ö÷F÷"ÓÒfÖ÷F÷%f'5³Ò’òR¢UÒÒS°¢Ö÷F÷"ÓæW6Öô–%ô³ÒÒãc°¢Ö÷F÷"ÓæW6Öô–%ô³ÒÒãc°¢Ö÷F÷"ÓæW6Öõf&5÷U³ÒÒãc°¢Ö÷F÷"ÓæW6Öõf&5÷U³ÒÒãc°¢Ö÷F÷"ÓæW6Öõf&5÷U³%ÒÒãc° ¢W6ÖõF†WFW'$fÇE²‡Ö÷F÷"ÓÒfÖ÷F÷%f'5³Ò’òR¢UÒÒãc°¢W6ÖõF†WFW'$dd&ÆVæE²‡Ö÷F÷"ÓÒfÖ÷F÷%f'5³Ò’òR¢UÒÒãc°¢W6ÖõF†WFW'$deU²‡Ö÷F÷"ÓÒfÖ÷F÷%f'5³Ò’òR¢UÒÒãc°¢W6ÖõÆÄ·Æ–VE²‡Ö÷F÷"ÓÒfÖ÷F÷%f'5³Ò’òR¢UÒÒãc° ¢òò6ÆV"F†Rf–VÆB×vV¶Væ–ær–çFVw&F÷"öâWfW'’5Dõ6òV6‚'Vâ7F'G0¢òòv—F‚–BÒ†æò&W6–GVÂvV¶Væ–ær’ÒF†R&VfW&Væ6W2&R&W7F÷&VB'¢òòF†Ræ÷&ÖÂ7F'GWF‚à¢gv5V•²‡Ö÷F÷"ÓÒfÖ÷F÷%f'5³Ò’òR¢UÒÒãc°¢gv4–E&VeU²‡Ö÷F÷"ÓÒfÖ÷F÷%f'5³Ò’òR¢UÒÒãc° ¢–b†W6Öô†æFÆRÒ„U4Ôõô†æFÆR“¢°¢U4Ôõ÷&W6WE&×2†W6Öô†æFÆR“° ¢òò'VçF–ÖRö'6W'fW"FWGVæS¢–bF†R452'2ôÇ266ÆR6†ævVB‡G—–6ÆÇ¢òò6WBv†–ÆR7F÷VB’Â&RÖÇ’—Bæ÷r6òF†RæW‡BÔõDõ%õ%TâW6W2F†P¢òòFWGVæVBö'6W'fW"â&V6ö×WFVBöæÇ’öâ6†ævR†æòW"Ô•5"W‡b‚’’à¢°¢V–çCe÷BÖ÷F÷$–G‚Ò‡Ö÷F÷"ÓÒfÖ÷F÷%f'5³Ò’òR¢S° ¢–b‚†W6Öõ'566ÆU¶Ö÷F÷$–G…ÒÒW6Öõ'4Æ–VE¶Ö÷F÷$–G…Ò’ÇÀ¢†W6ÖôÇ566ÆU¶Ö÷F÷$–G…ÒÒW6ÖôÇ4Æ–VE¶Ö÷F÷$–G…Ò’¢°¢6öæf–wW&U6Vç6÷&ÆW75&×2‡Ö÷F÷"ÂÖ÷F÷$–G‚“°¢Ð¢Ð¢Ð ¢&WGW&ã°§Ð §fö–Bf÷&6U6Vç6÷&ÆW74ævÆR„ÔõDõ%õf'5÷B§Ö÷F÷"ÂfÆöC3%÷BævÆUR§°¢Ö÷F÷"ÓæW6ÖôævÆURÒæ÷&ÖÆ—¦UR†ævÆUR“°¢Ö÷F÷"ÓæW6ÖôævÆU&BÒÖ÷F÷"ÓæW6ÖôævÆUR¢ÔD…õEtõõ“° ¢–b‡Ö÷F÷"ÓæW6ÖôævÆU&BâÔD…õ’¢°¢Ö÷F÷"ÓæW6ÖôævÆU&BÓÒÔD…õEtõõ“°¢Ð ¢&WGW&ã°§Ð §fö–B7–æ56Vç6÷&ÆW74W7F–ÖF÷$ævÆR„ÔõDõ%õf'5÷B§Ö÷F÷"ÂfÆöC3%÷BævÆUR§°¢U4Ôõô†æFÆRW6Öô†æFÆRÒ„U4Ôõô†æFÆR—Ö÷F÷"ÓæW6Öô†æFÆS°¢fÆöC3%÷B&tævÆUS°¢fÆöC3%÷B6VVE7VVES° ¢f÷&6U6Vç6÷&ÆW74ævÆR‡Ö÷F÷"ÂævÆUR“° ¢–b†W6Öô†æFÆRÒ„U4Ôõô†æFÆR“¢°¢&tævÆURÒæ÷&ÖÆ—¦UR‡Ö÷F÷"ÓæW6ÖôævÆUR°¢Ö÷F÷"ÓæW6ÖôævÆTöfg6WER“°¢Ö÷F÷"ÓæW6Öõ&tævÆURÒ&tævÆUS° ¢6VVE7VVERÒÖ÷F÷"Óç&2å6WGö–çEfÇVS° ¢–b†f'6b‡6VVE7VVER’Âf'6b‡Ö÷F÷"ÓæW6Öôf÷&6U7VVB’¢°¢–b‡6VVE7VVERÂãb¢°¢6VVE7VVERÒÖf'6b‡Ö÷F÷"ÓæW6Öôf÷&6U7VVB“°¢Ð¢VÇ6P¢°¢6VVE7VVERÒf'6b‡Ö÷F÷"ÓæW6Öôf÷&6U7VVB“°¢Ð¢Ð ¢6VVDU4ÔôævÆTæE7VVB†W6Öô†æFÆRÂ&tævÆURÂ6VVE7VVER“°¢Ö÷F÷"ÓæW6Öõ7VVERÒ6VVE7VVES°¢Ö÷F÷"ÓæW6Öõ7VVD‡¢Ò6VVE7VVER¢Ö÷F÷"Óæ&6Tg&W°¢Ð ¢&WGW&ã°§Ð §fö–B&ÆVæE6Vç6÷&ÆW74ævÆR„ÔõDõ%õf'5÷B§Ö÷F÷"ÂfÆöC3%÷B÷VäÆö÷ævÆUR§°¢fÆöC3%÷BW7F–ÖF÷$ævÆURÒæ÷&ÖÆ—¦UR‡Ö÷F÷"ÓæW6Öõ&tævÆURÐ¢Ö÷F÷"ÓæW6ÖôævÆTöfg6WER“°¢fÆöC3%÷BÇ†Òãc°¢fÆöC3%÷BævÆTW'%S° ¢–b‡Ö÷F÷"ÓæW6ÖõF¶V÷fW$6çDÖ‚âR¢°¢Ç†Ò†fÆöC3%÷B—Ö÷F÷"ÓæW6ÖõF¶V÷fW$6çG"ð¢†fÆöC3%÷B—Ö÷F÷"ÓæW6ÖõF¶V÷fW$6çDÖƒ°¢Ð ¢Ç†Òõög6B†Ç†ÂãbÂãb“°¢Ç†ÒÇ†¢Ç†¢ƒ2ãbÒƒ"ãb¢Ç†’“° ¢ævÆTW'%RÒw&T†Æb†W7F–ÖF÷$ævÆURÒ÷VäÆö÷ævÆUR“°¢Ö÷F÷"ÓæW6ÖôævÆURÒæ÷&ÖÆ—¦UR†÷VäÆö÷ævÆUR²†Ç†¢ævÆTW'%R’“°¢Ö÷F÷"ÓæW6ÖôævÆU&BÒÖ÷F÷"ÓæW6ÖôævÆUR¢ÔD…õEtõõ“° ¢–b‡Ö÷F÷"ÓæW6ÖôævÆU&BâÔD…õ’¢°¢Ö÷F÷"ÓæW6ÖôævÆU&BÓÒÔD…õEtõõ“°¢Ð ¢Ö÷F÷"ÓæW6ÖôævÆTW'%RÒw&T†Æb‡Ö÷F÷"ÓæW6ÖôævÆURÐ¢Ö÷F÷"ÓæW6ÖõWævÆUR“° ¢–b‡Ö÷F÷"ÓæW6ÖõF¶V÷fW$6çG"ÂÖ÷F÷"ÓæW6ÖõF¶V÷fW$6çDÖ‚¢°¢Ö÷F÷"ÓæW6ÖõF¶V÷fW$6çG"²³°¢Ð ¢&WGW&ã°§Ð §fö–B'Vå6Vç6÷&ÆW74W7F–ÖF÷"„ÔõDõ%õf'5÷B§Ö÷F÷"§°¢U4Ôõô†æFÆRW6Öô†æFÆRÒ„U4Ôõô†æFÆR—Ö÷F÷"ÓæW6Öô†æFÆS°¢ÔD…÷fV32f&5÷S°¢ÔD…÷fV3"–%ô°¢V–çCe÷BÖ÷F÷$–Gƒ°¢fÆöC3%÷B7VVE&Veô‡£°¢fÆöC3%÷B7VVE&Vd'5S°¢fÆöC3%÷BÆÄ·&ÆVæC°¢fÆöC3%÷BÆÄ·v–ã°¢fÆöC3%÷BÆÄ·Æ–VC°¢fÆöC3%÷BÆt6ö×S°¢fÆöC3%÷Bfd&ÆVæC°¢fÆöC3%÷B7VVD'5S°¢fÆöC3%÷BævÆT6ö×÷&C°¢fÆöC3%÷BævÆUÄÅ÷&C°¢fÆöC3%÷BW7F–ÖF÷$ævÆUS°¢fÆöC3%÷B7VVES° ¢–b‚†W6Öô†æFÆRÓÒ„U4Ôõô†æFÆR“’ÇÂ†—56Vç6÷&ÆW747F—fR‡Ö÷F÷"’ÓÒR’¢°¢&WGW&ã°¢Ð ¢Ö÷F÷$–G‚Ò‡Ö÷F÷"ÓÒfÖ÷F÷%f'5³Ò’òR¢S° ¢f&5÷RçfÇVU³ÒÒÖ÷F÷"ÓæW6Öõf&5÷U³Ó°¢f&5÷RçfÇVU³ÒÒÖ÷F÷"ÓæW6Öõf&5÷U³Ó°¢f&5÷RçfÇVU³%ÒÒÖ÷F÷"ÓæW6Öõf&5÷U³%Ó° ¢–%ôçfÇVU³ÒÒÖ÷F÷"ÓæW6Öô–%ô³Ó°¢–%ôçfÇVU³ÒÒÖ÷F÷"ÓæW6Öô–%ô³Ó° ¢7VVE&Veô‡¢ÒÖ÷F÷"Óç&2å6WGö–çEfÇVR¢Ö÷F÷"Óæ&6Tg&W°¢U4Ôõ÷6WE7VVE&Vb†W6Öô†æFÆRÂ7VVE&Veô‡¢“°¢U4Ôõ÷WFFUÄÅ&×2†W6Öô†æFÆR“° ¢7VVE&Vd'5RÒf'6b‡Ö÷F÷"Óç&2å6WGö–çEfÇVR“°¢ÆÄ·Æ–VBÒ‚„U4Ôõôö&¢¢–W6Öô†æFÆR’ÓçÆÅô·° ¢–b‡7VVE&Vd'5RâU4ÔõõÄÅôµô$ôõ5Eõ5D%EõR¢°¢–b‡7VVE&Vd'5RãÒU4ÔõõÄÅôµô$ôõ5EôeTÄÅõR¢°¢ÆÄ·&ÆVæBÒãc°¢Ð¢VÇ6P¢°¢ÆÄ·&ÆVæBÒ‡7VVE&Vd'5RÒU4ÔõõÄÅôµô$ôõ5Eõ5D%EõR’ð¢„U4ÔõõÄÅôµô$ôõ5EôeTÄÅõRÐ¢U4ÔõõÄÅôµô$ôõ5Eõ5D%EõR“°¢Ð ¢ÆÄ·v–âÒãb²‡ÆÄ·&ÆVæB ¢…õög6B†W6ÖõÆÄ·†–v…7VVDv–å¶Ö÷F÷$–G…ÒÀ¢ã3VbÂãb’Òãb’“°¢ÆÄ·Æ–VB£ÒÆÄ·v–ã°¢ÆÄ·Æ–VBÒõög6B‡ÆÄ·Æ–VBÂU4ÔõõÄÅôµô„$EôÔ‚À¢‚„U4Ôõôö&¢¢–W6Öô†æFÆR’ÓçÆÅô·Ö–â“°¢U4Ôõ÷6WEÄÄ·†W6Öô†æFÆRÂÆÄ·Æ–VB“°¢Ð ¢W6ÖõÆÄ·Æ–VE¶Ö÷F÷$–G…ÒÒÆÄ·Æ–VC° ¢U4Ôõ÷'Vâ†W6Öô†æFÆRÂÖ÷F÷"Óäd4Å÷&×2åfF6'W2Âef&5÷RÂd–%ô“° ¢–b‡Ö÷F÷"ÓçG$d4ÂÓæÇ7rÓÒTä5ô4Ä”%$D”ôåôDôäR¢°¢U4Ôõ÷WFFT·6Æ–FR†W6Öô†æFÆR“°¢Ð ¢òòÄÂÆrfVVFf÷'v&C¢F†WFW'"—2F†RÄÂw2–ç7FçFæV÷W2†6RÆp¢òò‡7FVG’7FFS¢7VVBô·’âÆ÷r×72—BæBFB—BFòF†R÷WGWBævÆRà¢òòF†—2—2â÷VâÖÆö÷÷WGWB6÷'&V7F–öã²F†RÄÂ&VÖ–ç2F†RW7F&Æ—6†V@¢òòÖöæÇ’FW6–vâv†–ÆRF†Rf–ÇFW&VBFW&Ò6÷fW'2—G2G–æÖ–2†6RÆrà¢W6ÖõF†WFW'$fÇE¶Ö÷F÷$–G…Ò³ÒU4ÔõõD„UDU%%ôÅeô² ¢‚‚„U4Ôõôö&¢¢–W6Öô†æFÆR’ÓçF†WFW'"ÒW6ÖõF†WFW'$fÇE¶Ö÷F÷$–G…Ò“° ¢Ö÷F÷"ÓæW6Öõ7VVD‡¢ÒU4ÔõövWE7VVEÄÅô‡¢†W6Öô†æFÆR“°¢7VVD'5RÒf'6b‡Ö÷F÷"ÓæW6Öõ7VVD‡¢òÖ÷F÷"Óæ&6Tg&W“° ¢–b‡7VVD'5RÃÒU4ÔõõD„UDU%%ôdeõ5D%EõR¢°¢fd&ÆVæBÒãc°¢Ð¢VÇ6R–b‡7VVD'5RãÒU4ÔõõD„UDU%%ôdeôeTÄÅõR¢°¢fd&ÆVæBÒãc°¢Ð¢VÇ6P¢°¢fd&ÆVæBÒ‡7VVD'5RÒU4ÔõõD„UDU%%ôdeõ5D%EõR’ð¢„U4ÔõõD„UDU%%ôdeôeTÄÅõRÒU4ÔõõD„UDU%%ôdeõ5D%EõR“°¢Ð ¢Æt6ö×RÒõög6B†W6ÖõF†WFW'$fÇE¶Ö÷F÷$–G…Ò ¢W6ÖõF†WFW'$ddv–å¶Ö÷F÷$–G…Ò¢fd&ÆVæBÀ¢U4ÔõõD„UDU%%ôdeôÔ…õRÂÔU4ÔõõD„UDU%%ôdeôÔ…õR“°¢W6ÖõF†WFW'$dd&ÆVæE¶Ö÷F÷$–G…ÒÒfd&ÆVæC°¢W6ÖõF†WFW'$deU¶Ö÷F÷$–G…ÒÒÆt6ö×S° ¢òò7V'G&7BF†R7VVBÖ–æFW†VB&–2F&ÆR‡¦W&òF‡&÷Vv‚f÷&6R×'Vâæ@¢òò&ÆVæB6–æ6RF†R&26WGö–çB—27F–ÆÂBF†Rf÷&6R7VVBF†W&R’à¢Æt6ö×RÓÒ†W6Öô&–5F&ÆTÆöö·W‡Ö÷F÷"Óç&2å6WGö–çEfÇVR’ ¢W6Öô&–46ö×v–å¶Ö÷F÷$–G…Ò“° ¢ævÆT6ö×÷&BÒ‡Ö÷F÷"ÓæW6Öõ7VVD‡¢¢Ö÷F÷"ÓæW6ÖôævÆTFVÆ•4b’°¢†Æt6ö×R¢ÔD…õEtõõ’“°¢ævÆUÄÅ÷&BÒU4Ôõö–æ7$ævÆR„U4ÔõövWDævÆUÄÂ†W6Öô†æFÆR’À¢ævÆT6ö×÷&B“° ¢Ö÷F÷"ÓæW6Öõ&tævÆURÒæ÷&ÖÆ—¦UR†ævÆUÄÅ÷&B¢ÔD…ôôäUôõdU%õEtõõ’“°¢W7F–ÖF÷$ævÆURÒæ÷&ÖÆ—¦UR‡Ö÷F÷"ÓæW6Öõ&tævÆURÐ¢Ö÷F÷"ÓæW6ÖôævÆTöfg6WER“° ¢–b†—56Vç6÷&ÆW75F¶V÷fW$7F—fR‡Ö÷F÷"’ÓÒR¢°¢Ö÷F÷"ÓæW6ÖôævÆURÒW7F–ÖF÷$ævÆUS°¢Ö÷F÷"ÓæW6ÖôævÆU&BÒÖ÷F÷"ÓæW6ÖôævÆUR¢ÔD…õEtõõ“° ¢–b‡Ö÷F÷"ÓæW6ÖôævÆU&BâÔD…õ’¢°¢Ö÷F÷"ÓæW6ÖôævÆU&BÓÒÔD…õEtõõ“°¢Ð¢Ð ¢7VVERÒÖ÷F÷"ÓæW6Öõ7VVD‡¢òÖ÷F÷"Óæ&6Tg&W°¢Ö÷F÷"ÓæW6Öõ7VVERÒ6GW&FUR‡7VVER“°¢Ö÷F÷"ÓæW6ÖõWævÆURÒÖ÷F÷"ÓçG$d4ÂÓçWäVÆV5F†WF°¢Ö÷F÷"ÓæW6ÖôævÆTW'%RÒw&T†Æb‡Ö÷F÷"ÓæW6ÖôævÆURÐ¢Ö÷F÷"ÓæW6ÖõWævÆUR“°¢Ö÷F÷"ÓæW6Öõ7VVDW'%RÒÖ÷F÷"ÓæW6Öõ7VVERÒÖ÷F÷"Óç7VVBå7VVC° ¢&WGW&ã°§Ð ¢òòÒÒÒÒÆ÷72ÖöbÖÆö6²vF6†För‡&ÖWFW"×f&–F–öâ&ö'W7FæW72W‡W&–ÖVçB’ÒÒÒÐ¢òòÆF6†W2W6ÖôÆ÷7DÆö6µ·…ÓÓv†VâÂ–â6Vç6÷&ÆW724Äõ4TBÆö÷†gFW"F†RF¶V÷fW ¢òò&ÆVæB’ÂF†RU4ÔòævÆRW'&÷"g2F†R–æFW‚Öæ6†÷&VBU&VfW&Væ6RW†6VVG0¢òòW6ÖôÆö6´ætW'%F‡$FVr†VÆV2FVr’õ"F†R7VVBW'&÷"W†6VVG2W6ÖôÆö6µ7DW'%F‡%P¢òò‡R’6öçF–çV÷W6Ç’f÷"ÆöævW"F†âW6ÖôÆö6´FV&÷Væ6T×2âF†—2—2F†RW"×FW7BÐ¢òòö–çBÄô4²FV6—6–öâf÷"F†R…'2ÆÆÖ&FÇ7VVB’&ö'W7FæW72Ö ¢òòW6ÖôÆ÷7DÆö6µ·…ÒÓÒÓâ7F–VBÆö6¶VBÓâw&–B6VÆÂ”å4”DRF†R6fR&Vv–öà¢òòW6ÖôÆ÷7DÆö6µ·…ÒÓÒÓâÆ÷7BÆö6²Óâw&–B6VÆÂõUE4”DRF†R6fR&Vv–öà¢òò$TBW6ÖôÆ÷7DÆö6µ·…Òöæ6RW"'Vâ–â452†—B—2ÆF6†VBf÷"F†Rv†öÆR'Vâ“°¢òò—B—26ÆV&VBWFöÖF–6ÆÇ’öâ5DõòV6‚æWr'Vâ‡&W6WE6Vç6÷&ÆW74W7F–ÖF÷"’à¢òòF†R“gƒrFFÆör'VffW"FöW2äõBæVVBæWr6†ææVÂÒF†—2—2W"×'VâfÆrà¢òòW6ÖôÆö6´ætW'$FVu·…Ò—2F†RÆ—fRÆætW''Â–âFVr††æG’FòvF6‚÷Æ÷B’à¢òòF‡&W6†öÆG2&RvF6‚×GVæ&ÆRg&öÒ452âF†RfÆr—2Gf—6÷'’æBFöW2äõB7F÷ ¢òòF†RG&—fR‡F†RW†—7F–ær÷fW"Ö7W'&VçBö÷fW"×7VVB&÷FV7F–öâwV&G2F†R…r“²õ ¢òòW6ÖôÆ÷7DÆö6²–çFò–÷W"7F÷Æöv–2–b–÷RvçBWFò×6‡WFF÷vâæV"F†R&÷VæF'’à¢òò…7FFRf&–&ÆW2&RFVf–æVBæV"F†RF÷öbF†—2f–ÆRÂ&÷fRF†R&W6WBâ§fö–BWFFU6Vç6÷&ÆW74Æö6µvF6‚„ÔõDõ%õf'5÷B§Ö÷F÷"ÂV–çCe÷BÖ÷F÷$–G‚§°¢fÆöC3%÷BætW'$FVs°¢fÆöC3%÷B7DW'%S°¢V–çC3%÷BFV&÷Væ6UF–6·3° ¢–b†Ö÷F÷$–G‚âR¢°¢&WGW&ã°¢Ð ¢òòöæÇ’ÖVæ–ævgVÂöæ6RF†RU4Ôò—27GVÆÇ’7FVW&–æs¢6Vç6÷&ÆW726öçG&öÂÀ¢òò6Æ÷6VBÆö÷„DôäR’ÂæB7BF†RF¶V÷fW"&ÆVæBâ÷WG6–FRF†BÂ†öÆBF†P¢òòFV&÷Væ6R6÷VçFW"B'WBFòäõB6ÆV"F†RÆF6‚†Æ÷72V&Æ–W"–âF†P¢òò'Vâ×W7B7F–ÆÂ&R&W÷'FVB’âF†RÆF6‚6ÆV'2öâ5Dõà¢–b‚†—56Vç6÷&ÆW746öçG&öÂ‡Ö÷F÷"’ÓÒR’ÇÀ¢‡Ö÷F÷"ÓçG$d4ÂÓæÇ7rÒTä5ô4Ä”%$D”ôåôDôäR’ÇÀ¢†—56Vç6÷&ÆW75F¶V÷fW$7F—fR‡Ö÷F÷"’ÒR’¢°¢W6ÖôÆö6´&D6çG%¶Ö÷F÷$–G…ÒÒS°¢&WGW&ã°¢Ð ¢ætW'$FVrÒf'6b‡Ö÷F÷"ÓæW6ÖôævÆTW'%R’¢3cãc²òòR×&WbÓâVÆV2FVp¢7DW'%RÒf'6b‡Ö÷F÷"ÓæW6Öõ7VVDW'%R“°¢W6ÖôÆö6´ætW'$FVu¶Ö÷F÷$–G…ÒÒætW'$FVs° ¢FV&÷Væ6UF–6·2Ò‡V–çC3%÷B’‚‚†fÆöC3%÷B–W6ÖôÆö6´FV&÷Væ6T×5¶Ö÷F÷$–G…Ò’ ¢ãbòÖ÷F÷"ÓåG2“²òò×2Óâ•5"F–6·0 ¢–b‚†ætW'$FVrâW6ÖôÆö6´ætW'%F‡$FVu¶Ö÷F÷$–G…Ò’ÇÀ¢‡7DW'%RâW6ÖôÆö6µ7DW'%F‡%U¶Ö÷F÷$–G…Ò’¢°¢W6ÖôÆö6´&D6çG%¶Ö÷F÷$–G…Ò²³°¢–b‚‡V–çC3%÷B–W6ÖôÆö6´&D6çG%¶Ö÷F÷$–G…ÒãÒFV&÷Væ6UF–6·2¢°¢W6ÖôÆ÷7DÆö6µ¶Ö÷F÷$–G…ÒÒS²òòÆF6†V@¢W6ÖôÆö6´&D6çG%¶Ö÷F÷$–G…ÒÒ‡V–çCe÷B–FV&÷Væ6UF–6·3²òòæòw& ¢Ð¢Ð¢VÇ6P¢°¢W6ÖôÆö6´&D6çG%¶Ö÷F÷$–G…ÒÒS°¢Ð ¢&WGW&ã°§Ð §fö–B'Väf–VÆEvV¶Væ–ær„ÔõDõ%õf'5÷B§Ö÷F÷"ÂV–çCe÷BÖ÷F÷$–G‚§°¢fÆöC3%÷BfC°¢fÆöC3%÷Bg°¢fÆöC3%÷Bg3°¢fÆöC3%÷BdÆ–Ö—C°¢fÆöC3%÷Bg5&Vc°¢fÆöC3%÷BævÆTÖ–ã°¢fÆöC3%÷BW'#°¢fÆöC3%÷B÷WC°¢fÆöC3%÷BævÆT7W'&VçC°¢fÆöC3%÷B—5&Vc°¢fÆöC3%÷B—4Ös°¢fÆöC3%÷B—56–vã°¢fÆöC3%÷B–C°¢fÆöC3%÷B—°¢fÆöC3%÷B–DÖ„æVs° ¢–b†Ö÷F÷$–G‚âR¢°¢&WGW&ã°¢Ð ¢òòVævvRôäÅ’–â7FVG’6Æ÷6VBÆö÷†gFW"F†RF¶V÷fW"&ÆVæB’v—F‚ep¢òòVæ&ÆVBâ÷F†W'v—6R6ÆV"F†R–çFVw&F÷"æBÆVfRF†R&VfW&Væ6W2F†@¢òò'V–ÆDÆWfVÃCbÇ&VG’6WBÒ6òeröfb—2&—BÖ–FVçF–6ÂFòF†RöÆBF‚À¢òòæB7F'GWòÆ–væÖVçBò†æFöfb&RæWfW"F÷V6†VBà¢–b‚†fÆtVæ&ÆTet5¶Ö÷F÷$–G…ÒÓÒR’ÇÀ¢†—56Vç6÷&ÆW746öçG&öÂ‡Ö÷F÷"’ÓÒR’ÇÀ¢‡Ö÷F÷"ÓçG$d4ÂÓæÇ7rÒTä5ô4Ä”%$D”ôåôDôäR’ÇÀ¢†—56Vç6÷&ÆW75F¶V÷fW$7F—fR‡Ö÷F÷"’ÒR’¢°¢gv5V•¶Ö÷F÷$–G…ÒÒãc°¢gv4–E&VeU¶Ö÷F÷$–G…ÒÒãc°¢&WGW&ã°¢Ð ¢òò7FF÷"föÇFvRÖvæ—GVFRæBF†RÖöGVÆF–öâÖÆ–Ö—BÖ&6VB&VfW&Væ6Rà¢fBÒÖ÷F÷"Óç•ö–Bæ÷WC°¢gÒÖ÷F÷"ÓçG$d4ÂÓç•ö—æ÷WC°¢g2Ò7'Fb‚‡fB¢fB’²‡g¢g’“° ¢dÆ–Ö—BÒf'6b‡Ö÷F÷"Óç•ö–BåVÖ‚“° ¢–b†f'6b‡Ö÷F÷"ÓçG$d4ÂÓç•ö—åVÖ‚’ÂdÆ–Ö—B¢°¢dÆ–Ö—BÒf'6b‡Ö÷F÷"ÓçG$d4ÂÓç•ö—åVÖ‚“°¢Ð ¢g5&VbÒgv5g5&Ve4e¶Ö÷F÷$–G…Ò¢dÆ–Ö—C° ¢òòföÇFvRÖÖvæ—GVFR’â÷WGWB†ævÆR–â&B’—26Æ×VBFð¢òò¶ævÆTÖ–âƒÃ’ÂÓ¢—B6—G2B†æòer’v†–ÆRg2ÃÒg5&VbæBöæÇ¢òòvöW2æVvF—fRv†Vâg2÷fW'6†ö÷G2F†R&VfW&Væ6RâævÆTÖ–â62F†P¢òòf–VÆB×vV¶Væ–ærF–ÇBà¢ævÆTÖ–âÒgv4ævÆTÖ…&E¶Ö÷F÷$–G…Ó°¢W'"Òg5&VbÒg3° ¢gv5V•¶Ö÷F÷$–G…Ò³Ò†gv4¶•¶Ö÷F÷$–G…Ò¢W'"“° ¢–b†gv5V•¶Ö÷F÷$–G…Òâãb¢°¢gv5V•¶Ö÷F÷$–G…ÒÒãc°¢Ð¢VÇ6R–b†gv5V•¶Ö÷F÷$–G…ÒÂævÆTÖ–â¢°¢gv5V•¶Ö÷F÷$–G…ÒÒævÆTÖ–ã°¢Ð ¢÷WBÒ†gv4·¶Ö÷F÷$–G…Ò¢W'"’²gv5V•¶Ö÷F÷$–G…Ó° ¢–b†÷WBâãb¢°¢÷WBÒãc°¢Ð¢VÇ6R–b†÷WBÂævÆTÖ–â¢°¢÷WBÒævÆTÖ–ã°¢Ð ¢ævÆT7W'&VçBÒÔD…õ•ôõdU%õEtòÒ÷WC²òòãÒ’ó  ¢gv5g5U¶Ö÷F÷$–G…ÒÒg3°¢gv5g5&VeU¶Ö÷F÷$–G…ÒÒg5&Vc°¢gv4ævÆU&E¶Ö÷F÷$–G…ÒÒævÆT7W'&VçC° ¢òò7Æ—BF†R&W6VçB—6öÖÖæBÖvæ—GVFR–çFò†æVvF—fR–BÂ&VGV6VB—’À¢òò&W6W'f–ærF÷'VRF—&V7F–öââBævÆT7W'&VçBÒ’ó"F†—2v—fW2–BÒ ¢òòæB—Væ6†ævVBÂ6òF†RVævvR—26VÖÆW72à¢—5&VbÒÖ÷F÷"ÓçG$d4ÂÓç•ö—ç&Vc°¢—4ÖrÒf'6b„—5&Vb“°¢—56–vâÒ„—5&VbãÒãb’òãb¢Óãc° ¢–BÒ—4Ör¢6÷6b†ævÆT7W'&VçB“²òòÃÒ–âf–VÆBvV¶Væ–æp¢—Ò—4Ör¢6–æb†ævÆT7W'&VçB“²òòãÒ  ¢òò†&B6fWG’6Æ×öâF†R–æ¦V7FVBæVvF—fR–Bà¢–DÖ„æVrÒgv4–DÖ„æVuU¶Ö÷F÷$–G…Ó° ¢–b„–BÂÔ–DÖ„æVr¢°¢–BÒÔ–DÖ„æVs°¢Ð¢VÇ6R–b„–Bâãb¢°¢–BÒãc°¢Ð ¢Ö÷F÷"Óç•ö–Bç&VbÒ–C°¢Ö÷F÷"ÓçG$d4ÂÓç•ö—ç&VbÒ—56–vâ¢—°¢gv4–E&VeU¶Ö÷F÷$–G…ÒÒ–C° ¢&WGW&ã°§Ð
+    esmoHandle = ESMO_init(&esmoVars[motorIdx], sizeof(ESMO_Obj));
+    pMotor->esmoHandle = (void *)esmoHandle;
+
+    configureSensorlessParams(pMotor, motorIdx);
+
+    return;
+}
+
+void resetSensorlessEstimator(MOTOR_Vars_t *pMotor)
+{
+    ESMO_Handle esmoHandle = (ESMO_Handle)pMotor->esmoHandle;
+
+    pMotor->esmoForceRunCntr = 0;
+    pMotor->esmoTakeoverCntr = 0;
+    pMotor->esmoAnglePu = 0.0f;
+    pMotor->esmoAngleRad = 0.0f;
+    pMotor->esmoRawAnglePu = 0.0f;
+    pMotor->esmoSpeedPu = 0.0f;
+    pMotor->esmoSpeedHz = 0.0f;
+    pMotor->esmoQepAnglePu = 0.0f;
+    pMotor->esmoAngleErrPu = 0.0f;
+    pMotor->esmoSpeedErrPu = 0.0f;
+
+    // clear the loss-of-lock latch so each run starts fresh
+    esmoLostLock[(pMotor == &motorVars[0]) ? 0U : 1U] = 0U;
+    esmoLockBadCntr[(pMotor == &motorVars[0]) ? 0U : 1U] = 0U;
+    pMotor->esmoIab_A[0] = 0.0f;
+    pMotor->esmoIab_A[1] = 0.0f;
+    pMotor->esmoVabc_pu[0] = 0.0f;
+    pMotor->esmoVabc_pu[1] = 0.0f;
+    pMotor->esmoVabc_pu[2] = 0.0f;
+
+    esmoThetaErrFlt[(pMotor == &motorVars[0]) ? 0U : 1U] = 0.0f;
+    esmoThetaErrFFBlend[(pMotor == &motorVars[0]) ? 0U : 1U] = 0.0f;
+    esmoThetaErrFFPu[(pMotor == &motorVars[0]) ? 0U : 1U] = 0.0f;
+    esmoPllKpApplied[(pMotor == &motorVars[0]) ? 0U : 1U] = 0.0f;
+
+    // Clear the field-weakening integrator on every STOP so each run starts
+    // with id = 0 (no residual weakening) - the references are restored by
+    // the normal startup path.
+    fwcUi[(pMotor == &motorVars[0]) ? 0U : 1U] = 0.0f;
+    fwcIdRefPu[(pMotor == &motorVars[0]) ? 0U : 1U] = 0.0f;
+
+    if(esmoHandle != (ESMO_Handle)0)
+    {
+        ESMO_resetParams(esmoHandle);
+
+        // Runtime observer detune: if the CCS Rs/Ls scale changed (typically
+        // set while stopped), re-apply it now so the next MOTOR_RUN uses the
+        // detuned observer. Recomputed only on change (no per-ISR expf()).
+        {
+            uint16_t motorIdx = (pMotor == &motorVars[0]) ? 0U : 1U;
+
+            if((esmoRsScale[motorIdx] != esmoRsApplied[motorIdx]) ||
+               (esmoLsScale[motorIdx] != esmoLsApplied[motorIdx]))
+            {
+                configureSensorlessParams(pMotor, motorIdx);
+            }
+        }
+    }
+
+    return;
+}
+
+void forceSensorlessAngle(MOTOR_Vars_t *pMotor, float32_t anglePu)
+{
+    pMotor->esmoAnglePu = normalizePu(anglePu);
+    pMotor->esmoAngleRad = pMotor->esmoAnglePu * MATH_TWO_PI;
+
+    if(pMotor->esmoAngleRad > MATH_PI)
+    {
+        pMotor->esmoAngleRad -= MATH_TWO_PI;
+    }
+
+    return;
+}
+
+void syncSensorlessEstimatorAngle(MOTOR_Vars_t *pMotor, float32_t anglePu)
+{
+    ESMO_Handle esmoHandle = (ESMO_Handle)pMotor->esmoHandle;
+    float32_t rawAnglePu;
+    float32_t seedSpeedPu;
+
+    forceSensorlessAngle(pMotor, anglePu);
+
+    if(esmoHandle != (ESMO_Handle)0)
+    {
+        rawAnglePu = normalizePu(pMotor->esmoAnglePu +
+                                 pMotor->esmoAngleOffsetPu);
+        pMotor->esmoRawAnglePu = rawAnglePu;
+
+        seedSpeedPu = pMotor->rc.SetpointValue;
+
+        if(fabsf(seedSpeedPu) < fabsf(pMotor->esmoForceSpeed))
+        {
+            if(seedSpeedPu < 0.0f)
+            {
+                seedSpeedPu = -fabsf(pMotor->esmoForceSpeed);
+            }
+            else
+            {
+                seedSpeedPu = fabsf(pMotor->esmoForceSpeed);
+            }
+        }
+
+        seedESMOAngleAndSpeed(esmoHandle, rawAnglePu, seedSpeedPu);
+        pMotor->esmoSpeedPu = seedSpeedPu;
+        pMotor->esmoSpeedHz = seedSpeedPu * pMotor->baseFreq;
+    }
+
+    return;
+}
+
+void blendSensorlessAngle(MOTOR_Vars_t *pMotor, float32_t openLoopAnglePu)
+{
+    float32_t estimatorAnglePu = normalizePu(pMotor->esmoRawAnglePu -
+                                             pMotor->esmoAngleOffsetPu);
+    float32_t alpha = 1.0f;
+    float32_t angleErrPu;
+
+    if(pMotor->esmoTakeoverCntMax > 0U)
+    {
+        alpha = (float32_t)pMotor->esmoTakeoverCntr /
+                (float32_t)pMotor->esmoTakeoverCntMax;
+    }
+
+    alpha = __fsat(alpha, 1.0f, 0.0f);
+    alpha = alpha * alpha * (3.0f - (2.0f * alpha));
+
+    angleErrPu = wrapPuHalf(estimatorAnglePu - openLoopAnglePu);
+    pMotor->esmoAnglePu = normalizePu(openLoopAnglePu + (alpha * angleErrPu));
+    pMotor->esmoAngleRad = pMotor->esmoAnglePu * MATH_TWO_PI;
+
+    if(pMotor->esmoAngleRad > MATH_PI)
+    {
+        pMotor->esmoAngleRad -= MATH_TWO_PI;
+    }
+
+    pMotor->esmoAngleErrPu = wrapPuHalf(pMotor->esmoAnglePu -
+                                        pMotor->esmoQepAnglePu);
+
+    if(pMotor->esmoTakeoverCntr < pMotor->esmoTakeoverCntMax)
+    {
+        pMotor->esmoTakeoverCntr++;
+    }
+
+    return;
+}
+
+void runSensorlessEstimator(MOTOR_Vars_t *pMotor)
+{
+    ESMO_Handle esmoHandle = (ESMO_Handle)pMotor->esmoHandle;
+    MATH_vec3 Vabc_pu;
+    MATH_vec2 Iab_A;
+    uint16_t motorIdx;
+    float32_t speedRef_Hz;
+    float32_t speedRefAbsPu;
+    float32_t pllKpBlend;
+    float32_t pllKpGain;
+    float32_t pllKpApplied;
+    float32_t lagCompPu;
+    float32_t ffBlend;
+    float32_t speedAbsPu;
+    float32_t angleComp_rad;
+    float32_t anglePLL_rad;
+    float32_t estimatorAnglePu;
+    float32_t speedPu;
+
+    if((esmoHandle == (ESMO_Handle)0) || (isSensorlessActive(pMotor) == 0U))
+    {
+        return;
+    }
+
+    motorIdx = (pMotor == &motorVars[0]) ? 0U : 1U;
+
+    Vabc_pu.value[0] = pMotor->esmoVabc_pu[0];
+    Vabc_pu.value[1] = pMotor->esmoVabc_pu[1];
+    Vabc_pu.value[2] = pMotor->esmoVabc_pu[2];
+
+    Iab_A.value[0] = pMotor->esmoIab_A[0];
+    Iab_A.value[1] = pMotor->esmoIab_A[1];
+
+    speedRef_Hz = pMotor->rc.SetpointValue * pMotor->baseFreq;
+    ESMO_setSpeedRef(esmoHandle, speedRef_Hz);
+    ESMO_updatePLLParams(esmoHandle);
+
+    speedRefAbsPu = fabsf(pMotor->rc.SetpointValue);
+    pllKpApplied = ((ESMO_Obj *)esmoHandle)->pll_Kp;
+
+    if(speedRefAbsPu > ESMO_PLL_KP_BOOST_START_PU)
+    {
+        if(speedRefAbsPu >= ESMO_PLL_KP_BOOST_FULL_PU)
+        {
+            pllKpBlend = 1.0f;
+        }
+        else
+        {
+            pllKpBlend = (speedRefAbsPu - ESMO_PLL_KP_BOOST_START_PU) /
+                    (ESMO_PLL_KP_BOOST_FULL_PU -
+                     ESMO_PLL_KP_BOOST_START_PU);
+        }
+
+        pllKpGain = 1.0f + (pllKpBlend *
+                (__fsat(esmoPllKpHighSpeedGain[motorIdx],
+                        1.35f, 1.0f) - 1.0f));
+        pllKpApplied *= pllKpGain;
+        pllKpApplied = __fsat(pllKpApplied, ESMO_PLL_KP_HARD_MAX,
+                              ((ESMO_Obj *)esmoHandle)->pll_KpMin);
+        ESMO_setPLLKp(esmoHandle, pllKpApplied);
+    }
+
+    esmoPllKpApplied[motorIdx] = pllKpApplied;
+
+    ESMO_run(esmoHandle, pMotor->FCL_params.Vdcbus, &Vabc_pu, &Iab_A);
+
+    if(pMotor->ptrFCL->lsw == ENC_CALIBRATION_DONE)
+    {
+        ESMO_updateKslide(esmoHandle);
+    }
+
+    // PLL lag feedforward: thetaErr is the PLL's instantaneous phase lag
+    // (steady state: speed/Kp). Low-pass it and add it to the output angle.
+    // This is an open-loop output correction; the PLL remains the established
+    // P-only design while the filtered term covers its dynamic phase lag.
+    esmoThetaErrFlt[motorIdx] += ESMO_THETAERR_LPF_K *
+            (((ESMO_Obj *)esmoHandle)->thetaErr - esmoThetaErrFlt[motorIdx]);
+
+    pMotor->esmoSpeedHz = ESMO_getSpeedPLL_Hz(esmoHandle);
+    speedAbsPu = fabsf(pMotor->esmoSpeedHz / pMotor->baseFreq);
+
+    if(speedAbsPu <= ESMO_THETAERR_FF_START_PU)
+    {
+        ffBlend = 0.0f;
+    }
+    else if(speedAbsPu >= ESMO_THETAERR_FF_FULL_PU)
+    {
+        ffBlend = 1.0f;
+    }
+    else
+    {
+        ffBlend = (speedAbsPu - ESMO_THETAERR_FF_START_PU) /
+                (ESMO_THETAERR_FF_FULL_PU - ESMO_THETAERR_FF_START_PU);
+    }
+
+    lagCompPu = __fsat(esmoThetaErrFlt[motorIdx] *
+                       esmoThetaErrFFGain[motorIdx] * ffBlend,
+                       ESMO_THETAERR_FF_MAX_PU, -ESMO_THETAERR_FF_MAX_PU);
+    esmoThetaErrFFBlend[motorIdx] = ffBlend;
+    esmoThetaErrFFPu[motorIdx] = lagCompPu;
+
+    // Subtract the speed-indexed bias table (zero through force-run and
+    // blend since the rc setpoint is still at the force speed there).
+    lagCompPu -= (esmoBiasTableLookup(pMotor->rc.SetpointValue) *
+                  esmoBiasCompGain[motorIdx]);
+
+    angleComp_rad = (pMotor->esmoSpeedHz * pMotor->esmoAngleDelaySF) +
+                    (lagCompPu * MATH_TWO_PI);
+    anglePLL_rad = ESMO_incrAngle(ESMO_getAnglePLL(esmoHandle),
+                                  angleComp_rad);
+
+    pMotor->esmoRawAnglePu = normalizePu(anglePLL_rad * MATH_ONE_OVER_TWO_PI);
+    estimatorAnglePu = normalizePu(pMotor->esmoRawAnglePu -
+                                   pMotor->esmoAngleOffsetPu);
+
+    if(isSensorlessTakeoverActive(pMotor) == 0U)
+    {
+        pMotor->esmoAnglePu = estimatorAnglePu;
+        pMotor->esmoAngleRad = pMotor->esmoAnglePu * MATH_TWO_PI;
+
+        if(pMotor->esmoAngleRad > MATH_PI)
+        {
+            pMotor->esmoAngleRad -= MATH_TWO_PI;
+        }
+    }
+
+    speedPu = pMotor->esmoSpeedHz / pMotor->baseFreq;
+    pMotor->esmoSpeedPu = saturatePu(speedPu);
+    pMotor->esmoQepAnglePu = pMotor->ptrFCL->qep.ElecTheta;
+    pMotor->esmoAngleErrPu = wrapPuHalf(pMotor->esmoAnglePu -
+                                        pMotor->esmoQepAnglePu);
+    pMotor->esmoSpeedErrPu = pMotor->esmoSpeedPu - pMotor->speed.Speed;
+
+    return;
+}
+
+// ---- Loss-of-lock watchdog (parameter-variation robustness experiment) ----
+// Latches esmoLostLock[x]=1 when, in sensorless CLOSED loop (after the takeover
+// blend), the eSMO angle error vs the index-anchored QEP reference exceeds
+// esmoLockAngErrThrDeg (elec deg) OR the speed error exceeds esmoLockSpdErrThrPu
+// (pu) continuously for longer than esmoLockDebounceMs. This is the per-test-
+// point LOCK decision for the (Rs,lambda,speed) robustness map:
+//   esmoLostLock[x] == 0  -> stayed locked  -> grid cell INSIDE the safe region
+//   esmoLostLock[x] == 1  -> lost lock      -> grid cell OUTSIDE the safe region
+// READ esmoLostLock[x] once per run in CCS (it is latched for the whole run);
+// it is cleared automatically on STOP / each new run (resetSensorlessEstimator).
+// The 96x17 datalog buffer does NOT need a new channel - this is a per-run flag.
+// esmoLockAngErrDeg[x] is the live |angErr| in deg (handy to watch/plot).
+// Thresholds are watch-tunable from CCS. The flag is advisory and does NOT stop
+// the drive (the existing over-current/over-speed protection guards the HW); OR
+// esmoLostLock into your stop logic if you want auto-shutdown near the boundary.
+// (State variables are defined near the top of this file, above the reset.)
+void updateSensorlessLockWatch(MOTOR_Vars_t *pMotor, uint16_t motorIdx)
+{
+    float32_t angErrDeg;
+    float32_t spdErrPu;
+    uint32_t  debounceTicks;
+
+    if(motorIdx > 1U)
+    {
+        return;
+    }
+
+    // Only meaningful once the eSMO is actually steering: sensorless control,
+    // closed loop (DONE), and past the takeover blend. Outside that, hold the
+    // debounce counter at 0 but do NOT clear the latch (a loss earlier in the
+    // run must still be reported). The latch clears on STOP.
+    if((isSensorlessControl(pMotor) == 0U) ||
+       (pMotor->ptrFCL->lsw != ENC_CALIBRATION_DONE) ||
+       (isSensorlessTakeoverActive(pMotor) != 0U))
+    {
+        esmoLockBadCntr[motorIdx] = 0U;
+        return;
+    }
+
+    angErrDeg = fabsf(pMotor->esmoAngleErrPu) * 360.0f;   // pu-rev -> elec deg
+    spdErrPu  = fabsf(pMotor->esmoSpeedErrPu);
+    esmoLockAngErrDeg[motorIdx] = angErrDeg;
+
+    debounceTicks = (uint32_t)(((float32_t)esmoLockDebounceMs[motorIdx]) *
+                               0.001f / pMotor->Ts);        // ms -> ISR ticks
+
+    if((angErrDeg > esmoLockAngErrThrDeg[motorIdx]) ||
+       (spdErrPu  > esmoLockSpdErrThrPu[motorIdx]))
+    {
+        esmoLockBadCntr[motorIdx]++;
+        if((uint32_t)esmoLockBadCntr[motorIdx] >= debounceTicks)
+        {
+            esmoLostLock[motorIdx] = 1U;                    // latched
+            esmoLockBadCntr[motorIdx] = (uint16_t)debounceTicks;  // no wrap
+        }
+    }
+    else
+    {
+        esmoLockBadCntr[motorIdx] = 0U;
+    }
+
+    return;
+}
+
+void runFieldWeakening(MOTOR_Vars_t *pMotor, uint16_t motorIdx)
+{
+    float32_t vd;
+    float32_t vq;
+    float32_t Vs;
+    float32_t vLimit;
+    float32_t VsRef;
+    float32_t angleMin;
+    float32_t err;
+    float32_t out;
+    float32_t angleCurrent;
+    float32_t IsRef;
+    float32_t IsMag;
+    float32_t IsSign;
+    float32_t Id;
+    float32_t Iq;
+    float32_t IdMaxNeg;
+
+    if(motorIdx > 1U)
+    {
+        return;
+    }
+
+    // Engage ONLY in steady closed loop (after the takeover blend) with FW
+    // enabled. Otherwise clear the integrator and leave the references that
+    // buildLevel46 already set - so FW off is bit-identical to the old path,
+    // and startup / alignment / handoff are never touched.
+    if((flagEnableFWC[motorIdx] == 0U) ||
+       (isSensorlessControl(pMotor) == 0U) ||
+       (pMotor->ptrFCL->lsw != ENC_CALIBRATION_DONE) ||
+       (isSensorlessTakeoverActive(pMotor) != 0U))
+    {
+        fwcUi[motorIdx] = 0.0f;
+        fwcIdRefPu[motorIdx] = 0.0f;
+        return;
+    }
+
+    // Stator voltage magnitude and the modulation-limit-based reference.
+    vd = pMotor->pi_id.out;
+    vq = pMotor->ptrFCL->pi_iq.out;
+    Vs = sqrtf((vd * vd) + (vq * vq));
+
+    vLimit = fabsf(pMotor->pi_id.Umax);
+
+    if(fabsf(pMotor->ptrFCL->pi_iq.Umax) < vLimit)
+    {
+        vLimit = fabsf(pMotor->ptrFCL->pi_iq.Umax);
+    }
+
+    VsRef = fwcVsRefSF[motorIdx] * vLimit;
+
+    // Voltage-magnitude PI. Output (angle in rad) is clamped to
+    // [angleMin (<0), 0]: it sits at 0 (no FW) while Vs <= VsRef and only
+    // goes negative when Vs overshoots the reference. angleMin caps the
+    // field-weakening tilt.
+    angleMin = fwcAngleMaxRad[motorIdx];
+    err = VsRef - Vs;
+
+    fwcUi[motorIdx] += (fwcKi[motorIdx] * err);
+
+    if(fwcUi[motorIdx] > 0.0f)
+    {
+        fwcUi[motorIdx] = 0.0f;
+    }
+    else if(fwcUi[motorIdx] < angleMin)
+    {
+        fwcUi[motorIdx] = angleMin;
+    }
+
+    out = (fwcKp[motorIdx] * err) + fwcUi[motorIdx];
+
+    if(out > 0.0f)
+    {
+        out = 0.0f;
+    }
+    else if(out < angleMin)
+    {
+        out = angleMin;
+    }
+
+    angleCurrent = MATH_PI_OVER_TWO - out;       // >= pi/2
+
+    fwcVsPu[motorIdx] = Vs;
+    fwcVsRefPu[motorIdx] = VsRef;
+    fwcAngleRad[motorIdx] = angleCurrent;
+
+    // Split the present iq command magnitude into (negative id, reduced iq),
+    // preserving torque direction. At angleCurrent = pi/2 this gives id = 0
+    // and iq unchanged, so the engage is seamless.
+    IsRef = pMotor->ptrFCL->pi_iq.ref;
+    IsMag = fabsf(IsRef);
+    IsSign = (IsRef >= 0.0f) ? 1.0f : -1.0f;
+
+    Id = IsMag * cosf(angleCurrent);             // <= 0 in field weakening
+    Iq = IsMag * sinf(angleCurrent);             // >= 0
+
+    // Hard safety clamp on the injected negative id.
+    IdMaxNeg = fwcIdMaxNegPu[motorIdx];
+
+    if(Id < -IdMaxNeg)
+    {
+        Id = -IdMaxNeg;
+    }
+    else if(Id > 0.0f)
+    {
+        Id = 0.0f;
+    }
+
+    pMotor->pi_id.ref = Id;
+    pMotor->ptrFCL->pi_iq.ref = IsSign * Iq;
+    fwcIdRefPu[motorIdx] = Id;
+
+    return;
+}

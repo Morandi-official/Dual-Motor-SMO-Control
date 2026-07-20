@@ -254,4 +254,826 @@ FCL_Vars_t fclVars[2];
             (svgen2.Tb - pMotor->FCL_params.carrierMid) *                      \
             pMotor->esmoPwmScale;                                              \
                                                                                \
-/*                                  ﬂﬂ9∂âûÀk∫wµÁYΩ…çïQÖÕ¨Ã†§ÏÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄººÅ%ƒÅ±ΩΩ¿Ä¥ÅçΩµ¡±ï‡ÅçΩπ—…Ω∞Ä¥Å1(ÄÄÄÄººÅMQA%<ƒ·}1=\ÏÄÄºΩΩπ±‰ÅôΩ»Åëïâ’ú((ÄÄÄÄºº(ÄÄÄÄººÅ%êÅ±ΩΩ¿Ä¥ÅçΩµ¡±ï‡ÅçΩπ—…Ω∞Ä¥ÅAT(ÄÄÄÄººÄÅçΩµ¡±ï·—…∞°¡5Ω—Ω»§Ï(ÄÄÄÄºº(ÄÄÄÅ¡5Ω—Ω»¥˘¡•}•êπΩ’–Ä¨ÙÅ¡5Ω—Ω»¥˘}ç¡‘π≠•…ïç–Ä®(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ°ôç±YÖ…Õl¡tπE}ç±Ñπ•ë…»Ä®Å¡5Ω—Ω»¥˘}ç¡‘πçΩÕ]QÃÄ¥(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅôç±YÖ…Õl¡tπE}ç±Ñπ•≈…»Ä®Å¡5Ω—Ω»¥˘}ç¡‘πÕ•π]QÃ§Ä¨(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅ¡5Ω—Ω»¥˘}ç¡‘πçÖ……Â=Ÿï»Ï((ÄÄÄÅ15A}5I<°¡5Ω—Ω»¥˘¡•}•ê§Ï((ÄÄÄÅ¡••ëåÄÙÅ¡5Ω—Ω»¥˘¡•}•êπΩ’–Ä®Å¡Ö…¨≈ΩÕ•πîÏ(ÄÄÄÅ¡••ëÃÄÙÅ¡5Ω—Ω»¥˘¡•}•êπΩ’–Ä®Å¡Ö…¨≈M•πîÏ((ÄÄÄÄºº(ÄÄÄÄººÄÅ]Ö•–ÅôΩ»Å5A1`Å%DÅçÖ±åÅ•∏Å1Å—ºÅçΩµ¡±ï—î(ÄÄÄÄºº(ÄÄÄÄººÅMQA%<ƒ·}!% ÏÄÄººÅΩπ±‰ÅôΩ»Åëïâ’ú(ÄÄÄÅ›°•±î†°!]I °A%QI1}	MÄ¨ÅA%}=}%Hƒƒ§ÄòÅA%}%Hƒ≈}%9Q`Ã§ÄÙÙÅôÖ±Õî§Ï(ÄÄÄÄººÅMQA%<ƒ·}1=\ÏÄÄÄººÅΩπ±‰ÅôΩ»Åëïâ’ú((ÄÄÄÄºº(ÄÄÄÄººÄÅAï…ôΩ…¥Å—°îÅ•πŸï…ÕîÅ¡Ö…¨ÅÖπêÅçΩππïç–Å•π¡’—ÃÅΩòÅ—°îÅMY9}DÅµΩë’±î(ÄÄÄÄºº(ÄÄÄÅÕŸùï∏»πUÖ±¡°ÑÄÙÄ†Å¡••ëåÄ¥Ä°ôç±YÖ…Õl¡tπ¡•}•ƒπΩ’–Ä®Å¡Ö…¨≈M•πî§§Ä®(ÄÄÄÄÄÄÄÄÄÄÄÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπçÖ……•ï…5•êÏ((ÄÄÄÅÕŸùï∏»πUâï—ÑÄÙÄ†°ôç±YÖ…Õl¡tπ¡•}•ƒπΩ’–Ä®Å¡Ö…¨≈ΩÕ•πî§Ä¨Å¡••ëÃ§Ä®(ÄÄÄÄÄÄÄÄÄÄÄÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπçµ•ëÕ≈…–ÃÏ((ÄÄÄÄºº(ÄÄÄÄººÄÅ5I<Å—ºÄË¥(ÄÄÄÄººÄÄÄÄÄÄƒ∏ÅëºÅMY8(ÄÄÄÄººÄÄÄÄÄÄ»∏ÅëºÅA]5’¡ëÖ—ïÃ(ÄÄÄÄºº(ÄÄÄÅ1}MY9}A]5}AQ}5I<†§Ï((ÄÄÄÅI}1}=U9Q}4ƒÏ((ÄÄÄÅ…ï—’…∏Ï)Ù((ºº(ººÅ]…Ö¿Å’¿Åô’πç—•Ω∏Å—ºÅâîÅçÖ±±ïêÅâ‰Å—°îÅ’Õï»ÅÖ¡¡±•çÖ—•Ω∏ÅÖ–Å—°îÅçΩµ¡±ï—•Ω∏ÅΩò(ººÅÖÕ–Å’……ïπ–Å1ΩΩ¿Å•∏ÅΩµ¡±ï‡ÅΩπ—…Ω∞Å5Ωëî(ºº(ç¡…ÖùµÑÅ=}1%8°1}…’πΩµ¡±ï·—…±]…Ö¡}4ƒ∞Ä»§(ç¡…ÖùµÑÅU9Q%=9}=AQ%=9L°1}…’πΩµ¡±ï·—…±]…Ö¡}4ƒ∞Äà¥µÖ’—Ω}•π±•πîà§(ç¡…ÖùµÑÅU9Q%=9}=AQ%=9L°1}…’πΩµ¡±ï·—…±]…Ö¡}4ƒ∞Äà¥µΩ¡—}ôΩ…}Õ¡ïïêà§()ŸΩ•êÅ1}…’πΩµ¡±ï·—…±]…Ö¡}4ƒ°5=Q=I}YÖ…Õ}–Ä©¡5Ω—Ω»§)Ï(ÄÄÄÅô±ΩÖ–Ã…}–ÅYâÖÕîÄÄÄÄÙÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπYëçâ’ÃÄ®Äƒ∏ƒ‘ÄºÄ»Ï(ÄÄÄÅô±ΩÖ–Ã…}–Å•πŸiâÖÕîÄÙÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ%âÖÕîÄºÅYâÖÕîÏ((ÄÄÄÅô±ΩÖ–Ã…}–Å]QÃÄÄÄÄÄÄÙÅ¡5Ω—Ω»¥˘Õ¡ïïêπM¡ïïêÄ®(ÄÄÄÄÄÄÄÄÄÄÄÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ]âÖÕîÄ®Å¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ—MÖµ¿Ï((ÄÄÄÄºº(ÄÄÄÄººÄÅ1}ôΩ…çïQÖÕ≠Ã°1≈}	M∞Å1}QM-1|–§Ï(ÄÄÄÄºº(ÄÄÄÅ±Ñ≈Ω…çïQÖÕ¨–†§Ï((ÄÄÄÅ¡5Ω—Ω»¥˘}ç¡‘πçΩÕ]QÃÄÄÙÅ}}çΩÃ°]QÃ§Ï(ÄÄÄÅôç±YÖ…Õl¡tπE}ç±ÑπçΩÕ]QÃÄÙÅ¡5Ω—Ω»¥˘}ç¡‘πçΩÕ]QÃÏ((ÄÄÄÅ¡5Ω—Ω»¥˘}ç¡‘πÕ•π]QÃÄÄÙÅ}}Õ•∏°]QÃ§Ï(ÄÄÄÅôç±YÖ…Õl¡tπE}ç±ÑπÕ•π]QÃÄÙÅ¡5Ω—Ω»¥˘}ç¡‘πÕ•π]QÃÏ((ÄÄÄÅ¡5Ω—Ω»¥˘}ç¡‘πï·¡YÖ∞ÄÙ(ÄÄÄÄÄÄÄÄÄÄÄÅï·¡ò†¥°¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπIêÄºÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ1ê§Ä®(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ—MÖµ¿§Ï((ÄÄÄÅôç±YÖ…Õl¡tπE}ç±Ñπï·¡YÖ∞ÄÙ(ÄÄÄÄÄÄÄÄÄÄÄÅï·¡ò†¥°¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπIƒÄºÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ1ƒ§Ä®(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ—MÖµ¿§Ï((ÄÄÄÅ¡5Ω—Ω»¥˘}ç¡‘π≠•…ïç–ÄÙÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπIêÄ®Å•πŸiâÖÕîÄ®(ÄÄÄÄÄÄÄÄÄÄÄÅ}}Õ≈…–†»∏¡Ä¥Ä»∏¡Ä®Å}}çΩÃ°¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ›ççÄ®(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ—MÖµ¿§§Äº(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ†ƒ∏¡Ä¥Å¡5Ω—Ω»¥˘}ç¡‘πï·¡YÖ∞§Ï((ÄÄÄÅôç±YÖ…Õl¡tπE}ç±Ñπ≠•…ïç–ÄÙÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπIƒÄ®Å•πŸiâÖÕîÄ®(ÄÄÄÄÄÄÄÄÄÄÄÅ}}Õ≈…–†»∏¡Ä¥Ä»∏¡Ä®Å}}çΩÃ°¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ›ççDÄ®(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ—MÖµ¿§§Äº(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ†ƒ∏¡Ä¥Åôç±YÖ…Õl¡tπE}ç±Ñπï·¡YÖ∞§Ï((ÄÄÄÄºº(ÄÄÄÄººÅQºÅÕÖŸîÅATÅçÂç±ïÃÅÖπêÅÕ¡ïïêÅ’¿ÅçÖ±ç∏∞ÅçÖ……‰ÅΩŸï»ÅµÖ—†Å•ÃÅëΩπîÅ›•—°•∏(ÄÄÄÄººÄÄÄÅ—°•ÃÅ›…Ö¿Åô’πç—•Ω∏ÅÖπêÄùçÖ……Â=Ÿï»úÅçÖ……•ïÃÅ•–Å—ºÅ—°îÅπï·–Å•—ï…Ö—•Ω∏(ÄÄÄÄººÅ	ïµòÅçÖ±åÅ•ÃÅ…Ω±±ïêÅ•∏Å—ºÅ—°îÅDÅçÖ±çÃÅÖÃÅ—°îÅÕ¡ïïêÅÖπêÅô±’‡ÅëΩïÃÅπΩ–(ÄÄÄÄººÄÄÄÅç°ÖπùîÅµ’ç†Åâï—›ïï∏Å•—ï…Ö—•ΩπÃÄ¥Åï≈’Ö—•Ω∏Å—›ïÖ≠ïêÅ—ºÅô•–Å°ï…î(ÄÄÄÄºº(ÄÄÄÅ¡5Ω—Ω»¥˘}ç¡‘πçÖ……Â=Ÿï»ÄÙÄ¥°¡5Ω—Ω»¥˘}ç¡‘π≠•…ïç–Ä®(ÄÄÄÄÄÄÄÄÄÄÄÅôç±YÖ…Õl¡tπE}ç±Ñπ•ë…»Ä®Å¡5Ω—Ω»¥˘}ç¡‘πï·¡YÖ∞§Ï((ÄÄÄÅôç±YÖ…Õl¡tπE}ç±ÑπçÖ……Â=Ÿï»ÄÙÄ¥°ôç±YÖ…Õl¡tπE}ç±Ñπ≠•…ïç–Ä®(ÄÄÄÄÄÄÄÄÄÄÄÅôç±YÖ…Õl¡tπE}ç±Ñπ•≈…»Ä®Åôç±YÖ…Õl¡tπE}ç±Ñπï·¡YÖ∞§Ä¨(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ°¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ	ïµô,Ä®(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ°¡5Ω—Ω»¥˘Õ¡ïïêπM¡ïïêÄ¥Åôç±YÖ…Õl¡tπÕ¡ïïë]ïA…ïÿ§§Ï((ÄÄÄÅôç±YÖ…Õl¡tπÕ¡ïïë]ïA…ïÿÄÙÅ¡5Ω—Ω»¥˘Õ¡ïïêπM¡ïïêÏ((ÄÄÄÄºº(ÄÄÄÄººÅ—ºÅ¡ÖÕÃÅΩ∏Å—°îÅ•êÅÖπêÅ•ƒÅç’……ïπ–ÅôïïëâÖç¨ÅâÖç¨Å—ºÅ’Õï»∞(ÄÄÄÄººÅ’¡ëÖ—îÅ—°ï¥Å•∏Å—°îÅ›…Ö¿Åô’πç—•Ω∏(ÄÄÄÄºº(ÄÄÄÅ¡5Ω—Ω»¥˘¡•}•êπôâ¨ÄÙÅ¡5Ω—Ω»¥˘¡•}•êπ…ïòÄ¥Åôç±YÖ…Õl¡tπE}ç±Ñπ•ë…»Ï((ÄÄÄÅôç±YÖ…Õl¡tπ¡•}•ƒπôâ¨ÄÙÅôç±YÖ…Õl¡tπ¡•}•ƒπ…ïòÄ¥(ÄÄÄÄÄÄÄÄÄÄÄÅôç±YÖ…Õl¡tπE}ç±Ñπ•≈…»Ï((ÄÄÄÄºº(ÄÄÄÄºΩù•ŸîÅïπΩ’ù†Å—•µîÅâïôΩ…îÅç±ïÖ…•πúÅ%9Q‡–ÅôΩ»Å1ÅQM,Ä–ÅçΩµ¡±ï—•Ω∏(ÄÄÄÄºº(ÄÄÄÅ›°•±î†°!]I °A%QI1}	MÄ¨ÅA%}=}%Hƒƒ§ÄòÅA%}%Hƒ≈}%9Q`–§ÄÙÙÅôÖ±Õî§Ï((ÄÄÄÄºº(ÄÄÄÄººÅç±ïÖ»Å1Å—ÖÕ¨Åô±ÖùÃÄƒ∞ÄÃÅÖπêÄ–(ÄÄÄÄºº(ÄÄÄÅ!]I °A%QI1}	MÄ¨ÅA%}=}%Hƒƒ§ÄòÙÅ¯°A%}%Hƒ≈}%9Q`ƒÅ(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅA%}%Hƒ≈}%9Q`ÃÅ(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅA%}%Hƒ≈}%9Q`–Ä§Ï(ÄÄÄÅ…ï—’…∏Ï)Ù((ºº(ººÅ’πç—•Ω∏Å—°Ö–Å¡ï…ôΩ…µÃÅ—°îÅA$ÅΩπ—…Ω∞ÅÖÃÅ¡Ö…–ÅΩòÅ—°îÅÖÕ–Å’……ïπ–Å1ΩΩ¿(ºº(ç¡…ÖùµÑÅ=}1%8°1}…’πA%—…±}4»∞Ä»§(ç¡…ÖùµÑÅU9Q%=9}=AQ%=9L°1}…’πA%—…±}4»∞Äà¥µÖ’—Ω}•π±•πîà§(ç¡…ÖùµÑÅU9Q%=9}=AQ%=9L°1}…’πA%—…±}4»∞Äà¥µΩ¡—}ôΩ…}Õ¡ïïêà§()ŸΩ•êÅ1}…’πA%—…±}4»°5=Q=I}YÖ…Õ}–Ä©¡5Ω—Ω»§)Ï(ÄÄÄÅ…ïù•Õ—ï»Åô±ΩÖ–Ã…}–ÄÅç±Ö…≠î≈±¡°Ñ∞Åç±Ö…≠î≈	ï—ÑÏ(ÄÄÄÅ…ïù•Õ—ï»Åô±ΩÖ–Ã…}–ÄÅ¡Ö…¨≈M•πî∞Å¡Ö…¨≈ΩÕ•πîÏ(ÄÄÄÅMY8…}–ÄÄÄÄÄÄÄÄÄÄÄÅÕŸùï∏»Ï((ÄÄÄÄºº(ÄÄÄÄººÄÅ5I<Å—ºÄË¥(ÄÄÄÄººÄÄÄÄÄÄƒ∏Å…ïÖêÅE@Å¡ΩÕ•—•Ω∏(ÄÄÄÄººÄÄÄÄÄÄ»∏Åùï–Åç’……ïπ–ÅôïïêÅâÖç¨(ÄÄÄÄººÄÄÄÄÄÄÃ∏ÅëºÅ—°îÅ±Ö…≠î(ÄÄÄÄºº(ÄÄÄÅ4…}1}A=M%Q%=9}UII9Q}1I-}5I<†§Ï((ÄÄÄÄºº(ÄÄÄÄººÄÅAI,ÅQ…ÖπÕôΩ…µÖ—•Ω∏(ÄÄÄÄººÄÅΩππïç–Å•π¡’—ÃÅΩòÅ—°îÅA$ÅµΩë’±îÅÖπê(ÄÄÄÄººÄÅçÖ±∞Å—°îÅA$Å%DÅçΩπ—…Ω±±ï»ÅµÖç…ºÅ•∏Å1(ÄÄÄÄºº(ÄÄÄÅôç±YÖ…Õl≈tπ¡•}•ƒπï…»ÄÙÅôç±YÖ…Õl≈tπ¡•}•ƒπ…ïòÄ¥(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ†°ç±Ö…≠î≈	ï—ÑÄ®Å¡Ö…¨≈ΩÕ•πî§Ä¥Ä°ç±Ö…≠î≈±¡°ÑÄ®Å¡Ö…¨≈M•πî§§Ï((ÄÄÄÅ¡5Ω—Ω»¥˘¡•}•êπï…»ÄÙÅ¡5Ω—Ω»¥˘¡•}•êπ…ïòÄ¥(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ†°ç±Ö…≠î≈±¡°ÑÄ®Å¡Ö…¨≈ΩÕ•πî§Ä¨Ä°ç±Ö…≠î≈	ï—ÑÄ®Å¡Ö…¨≈M•πî§§Ï((ÄÄÄÄºº(ÄÄÄÄººÄÄÄÅΩππïç–Å•π¡’—ÃÅΩòÅ—°îÅA$ÅµΩë’±îÅÖπêÅçÖ±∞Å—°îÅA$Å%ÅçΩπ—…Ω±±ï»ÅµÖç…º(ÄÄÄÄººÄÅ1}ôΩ…çïQÖÕ≠Ã°1≈}	M∞Å1}QM-1|ÿ§Ï(ÄÄÄÄºº(ÄÄÄÅ±Ñ≈Ω…çïQÖÕ¨ÿ†§Ï((ÄÄÄÅ1}A%}5I<°¡5Ω—Ω»¥˘¡•}•ê§ÄÄÄÄÄÄÄÄÄÄÄÄÄººÅ%êÅ±ΩΩ¿Ä¥ÅA$ÅçΩπ—…Ω±±ï»Ä¥ÅAT((ÄÄÄÅ…ïù•Õ—ï»Åô±ΩÖ–Ã…}–ÄÅ¡••ëå∞Å¡••ëÃÏ((ÄÄÄÅ¡••ëåÄÙÅ¡5Ω—Ω»¥˘¡•}•êπΩ’–Ä®Å¡Ö…¨≈ΩÕ•πîÏ(ÄÄÄÅ¡••ëÃÄÙÅ¡5Ω—Ω»¥˘¡•}•êπΩ’–Ä®Å¡Ö…¨≈M•πîÏ((ÄÄÄÄºº(ÄÄÄÄººÄÅ]Ö•–ÅôΩ»ÅA$Å%DÅçÖ±åÅ•∏Å1Ä°1≈|ÿ§Å—ºÅçΩµ¡±ï—î(ÄÄÄÄºº(ÄÄÄÄººÅMQA%<ƒ·}!% ÏÄººÅΩπ±‰ÅôΩ»Åëïâ’ú(ÄÄÄÅ›°•±î†°!]I °A%QI1}	MÄ¨ÅA%}=}%Hƒƒ§ÄòÅA%}%Hƒ≈}%9Q`ÿ§ÄÙÙÅôÖ±Õî§Ï(ÄÄÄÄººÅMQA%<ƒ·}1=\ÏÄÄººÅΩπ±‰ÅôΩ»Åëïâ’ú((ÄÄÄÄºº(ÄÄÄÄººÄÅAï…ôΩ…¥Å—°îÅ•πŸï…ÕîÅ¡Ö…¨ÅÖπêÅçΩππïç–Å•π¡’—ÃÅΩòÅ—°îÅMY9}DÅµΩë’±î(ÄÄÄÄºº(ÄÄÄÅÕŸùï∏»πUÖ±¡°ÑÄÙÄ†Å¡••ëåÄ¥Ä°ôç±YÖ…Õl≈tπ¡•}•ƒπΩ’–Ä®Å¡Ö…¨≈M•πî§§Ä®(ÄÄÄÄÄÄÄÄÄÄÄÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπçÖ……•ï…5•êÏ((ÄÄÄÅÕŸùï∏»πUâï—ÑÄÄÙÄ†°ôç±YÖ…Õl≈tπ¡•}•ƒπΩ’–Ä®Å¡Ö…¨≈ΩÕ•πî§Ä¨Å¡••ëÃ§Ä®(ÄÄÄÄÄÄÄÄÄÄÄÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπçµ•ëÕ≈…–ÃÏ((ÄÄÄÄºº(ÄÄÄÄººÄÅ5I<Å—ºÄË¥(ÄÄÄÄººÄÄÄÄÄÄƒ∏ÅëºÅMY8(ÄÄÄÄººÄÄÄÄÄÄ»∏ÅëºÅA]5’¡ëÖ—ïÃ(ÄÄÄÄºº(ÄÄÄÅ1}MY9}A]5}AQ}5I<†§Ï((ÄÄÄÅI}1}=U9Q}4»Ï((ÄÄÄÅ…ï—’…∏Ï)Ù((ºº(ººÅ’¡±•çÖ—îÅ—°îÅô’πç—•ΩπÃÅôΩ»ÅµΩ—Ω…|»∞Åâ’–Åç°ÖπùîÅÕΩµîÅçΩëïÃÅôΩ»Å1Å—ÖÕ≠Ã(ººÅ—…•ùùï»ÅÖπêÅ•—ÃÅÕ—Ö—’ÃÅç°ïç¨(ººÅ—ÖÕ¨Ä‘∞Äÿ∞Ä‹∞ÅÖπêÄ‡ÅôΩ»ÅµΩ—Ω…|»(ºº((ºº(ººÄÅ]…Ö¿Å’¿Åô’πç—•Ω∏Å—ºÅâîÅçÖ±±ïêÅâ‰Å—°îÅ’Õï»ÅÖ¡¡±•çÖ—•Ω∏ÅÖ–Å—°îÅçΩµ¡±ï—•Ω∏ÅΩò(ººÅÖÕ–Å’……ïπ–Å1ΩΩ¿Å•∏ÅA$ÅΩπ—…Ω∞Å5Ωëî(ºº(ç¡…ÖùµÑÅ=}1%8°1}…’πA%—…±]…Ö¡}4»∞Ä»§(ç¡…ÖùµÑÅU9Q%=9}=AQ%=9L°1}…’πA%—…±]…Ö¡}4»∞Äà¥µÖ’—Ω}•π±•πîà§(ç¡…ÖùµÑÅU9Q%=9}=AQ%=9L°1}…’πA%—…±]…Ö¡}4»∞Äà¥µΩ¡—}ôΩ…}Õ¡ïïêà§()ŸΩ•êÅ1}…’πA%—…±]…Ö¡}4»°5=Q=I}YÖ…Õ}–Ä©¡5Ω—Ω»§)Ï(ÄÄÄÅô±ΩÖ–Ã…}–ÅYâÖÕîÄÙÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπYëçâ’ÃÄ®Äƒ∏ƒ‘ÄºÄ»Ï(ÄÄÄÅô±ΩÖ–Ã…}–Å•πŸiâÖÕîÄÙÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ%âÖÕîÄºÅYâÖÕîÏ((ÄÄÄÄºº(ÄÄÄÄººÅQºÅÕÖŸîÅATÅçÂç±ïÃÅÖπêÅÕ¡ïïêÅ’¿ÅçÖ±ç∏∞ÅçÖ……‰ÅΩŸï»ÅµÖ—†Å•ÃÅëΩπîÅ›•—°•∏(ÄÄÄÄººÄÄÅ—°•ÃÅ›…Ö¿Åô’πç—•Ω∏ÅÖπêÄπÖ……Â=Ÿï»ÅçÖ……•ïÃÅ•–Å—ºÅ—°îÅπï·–Å•—ï…Ö—•Ω∏(ÄÄÄÄººÅ	ïµòÅçÖ±åÅ•ÃÅ…Ω±±ïêÅ•∏Å—ºÅ—°îÅDÅçÖ±çÃÅÖÃÅ—°îÅÕ¡ïïêÅÖπêÅô±’‡ÅëΩïÃÅπΩ–(ÄÄÄÄººÄÄÅç°ÖπùîÅµ’ç†Åâï—›ïï∏Å•—ï…Ö—•ΩπÃÄ¥Åï≈’Ö—•Ω∏Å—›ïÖ≠ïêÅ—ºÅô•–Å°ï…î(ÄÄÄÄºº((ÄÄÄÄºº(ÄÄÄÄººÄÅ1}ôΩ…çïQÖÕ≠Ã°1≈}	M∞Å1}QM-1|‡§Ï(ÄÄÄÄºº(ÄÄÄÅ±Ñ≈Ω…çïQÖÕ¨‡†§Ï((ÄÄÄÄºº(ÄÄÄÄººÅU¡ëÖ—îÅA$Å%Å¡Ö…Öµï—ï…Ã(ÄÄÄÄºº(ÄÄÄÅ¡5Ω—Ω»¥˘¡•}•êπ-¿ÄÙÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ1êÄ®Å•πŸiâÖÕîÄ®(ÄÄÄÄÄÄÄÄÄÄÄÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ›ççÏ((ÄÄÄÅ¡5Ω—Ω»¥˘¡•}•êπ-§ÄÙÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπIêÄ®Å•πŸiâÖÕîÄ®(ÄÄÄÄÄÄÄÄÄÄÄÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ›ççÄ®Å¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ—MÖµ¿Ï((ÄÄÄÅ¡5Ω—Ω»¥˘¡•}•êπ-ï…»ÄÙÄ°¡5Ω—Ω»¥˘¡•}•êπ-§Ä®Ä¿∏’§Ä¨Å¡5Ω—Ω»¥˘¡•}•êπ-¿Ï(ÄÄÄÅ¡5Ω—Ω»¥˘¡•}•êπ-ï……=±êÄÙÄ°¡5Ω—Ω»¥˘¡•}•êπ-§Ä®Ä¿∏’§Ä¥Å¡5Ω—Ω»¥˘¡•}•êπ-¿Ï(ÄÄÄÅ¡5Ω—Ω»¥˘¡•}•êπçÖ……Â=Ÿï»ÄÙÄ°¡5Ω—Ω»¥˘¡•}•êπï…»Ä®Å¡5Ω—Ω»¥˘¡•}•êπ-ï……=±ê§Ï((ÄÄÄÄºº(ÄÄÄÄººÅU¡ëÖ—îÅA$Å%DÅ¡Ö…Öµï—ï…Ã(ÄÄÄÄºº(ÄÄÄÅôç±YÖ…Õl≈tπ¡•}•ƒπ-¿ÄÙÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ1ƒÄ®Å•πŸiâÖÕîÄ®(ÄÄÄÄÄÄÄÄÄÄÄÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ›ççDÏ(ÄÄÄÅôç±YÖ…Õl≈tπ¡•}•ƒπ-§ÄÙÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπIƒÄ®Å•πŸiâÖÕîÄ®(ÄÄÄÄÄÄÄÄÄÄÄÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ›ççDÄ®Å¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ—MÖµ¿Ï((ÄÄÄÅôç±YÖ…Õl≈tπ¡•}•ƒπ-ï…»ÄÙÄ°ôç±YÖ…Õl≈tπ¡•}•ƒπ-§Ä®Ä¿∏‘§Ä¨(ÄÄÄÄÄÄÄÄÄÄÄÅôç±YÖ…Õl≈tπ¡•}•ƒπ-¿Ï((ÄÄÄÅôç±YÖ…Õl≈tπ¡•}•ƒπ-ï……=±êÄÙÄ°ôç±YÖ…Õl≈tπ¡•}•ƒπ-§Ä®Ä¿∏‘§Ä¥(ÄÄÄÄÄÄÄÄÄÄÄÅôç±YÖ…Õl≈tπ¡•}•ƒπ-¿Ï((ÄÄÄÅôç±YÖ…Õl≈tπ¡•}•ƒπçÖ……Â=Ÿï»ÄÙÄ°ôç±YÖ…Õl≈tπ¡•}•ƒπï…»Ä®(ÄÄÄÄÄÄÄÄÄÄÄÅôç±YÖ…Õl≈tπ¡•}•ƒπ-ï……=±ê§Ä¨(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ†Å¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ	ïµô,Ä®(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ°¡5Ω—Ω»¥˘Õ¡ïïêπM¡ïïêÄ¥Åôç±YÖ…Õl≈tπÕ¡ïïë]ïA…ïÿ§§Ï((ÄÄÄÅôç±YÖ…Õl≈tπÕ¡ïïë]ïA…ïÿÄÙÅ¡5Ω—Ω»¥˘Õ¡ïïêπM¡ïïêÏ((ÄÄÄÄºº(ÄÄÄÄººÅ—ºÅ¡ÖÕÃÅΩ∏Å—°îÅ•êÅÖπêÅ•ƒÅç’……ïπ–ÅôïïëâÖç¨ÅâÖç¨Å—ºÅ’Õï»∞(ÄÄÄÄººÅ’¡ëÖ—îÅ—°ï¥Å•∏Å—°îÅ›…Ö¿Åô’πç—•Ω∏(ÄÄÄÄºº(ÄÄÄÅ¡5Ω—Ω»¥˘¡•}•êπôâ¨ÄÙÅ¡5Ω—Ω»¥˘¡•}•êπ…ïòÄ¥Å¡5Ω—Ω»¥˘¡•}•êπï…»Ï((ÄÄÄÅôç±YÖ…Õl≈tπ¡•}•ƒπôâ¨ÄÙÄÅôç±YÖ…Õl≈tπ¡•}•ƒπ…ïòÄ¥(ÄÄÄÄÄÄÄÄÄÄÄÅôç±YÖ…Õl≈tπ¡•}•ƒπï…»Ï((ÄÄÄÄºº(ÄÄÄÄººÅù•ŸîÅïπΩ’ù†Å—•µîÅâïôΩ…îÅç±ïÖ…•πúÅ%9Q‡‡ÅôΩ»Å1Å—ÖÕ¨Ä‡ÅçΩµ¡±ï—•Ω∏(ÄÄÄÄºº(ÄÄÄÅ›°•±î†°!]I °A%QI1}	MÄ¨ÅA%}=}%Hƒƒ§ÄòÅA%}%Hƒ≈}%9Q`‡§ÄÙÙÅôÖ±Õî§Ï((ÄÄÄÄºº(ÄÄÄÄººÅç±ïÖ»Å1Å—ÖÕ¨Åô±ÖùÃÄ‘∞Äÿ∞ÅÖπêÄ‡(ÄÄÄÄºº(ÄÄÄÅ!]I °A%QI1}	MÄ¨ÅA%}=}%Hƒƒ§ÄòÙÅ¯°A%}%Hƒ≈}%9Q`‘Å(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅA%}%Hƒ≈}%9Q`ÿÅ(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅA%}%Hƒ≈}%9Q`‡Ä§Ï(ÄÄÄÅ…ï—’…∏Ï)Ù(((ºº(ººÅ’πç—•Ω∏Å—°Ö–Å¡ï…ôΩ…µÃÅ—°îÅΩµ¡±ï‡ÅçΩπ—…Ω∞ÅÖÃÅ¡Ö…–ÅΩòÅ—°îÅÖÕ–Å’……ïπ–Å1ΩΩ¿(ºº(ç¡…ÖùµÑÅ=}1%8°1}…’πΩµ¡±ï·—…±}4»∞Ä»§(ç¡…ÖùµÑÅU9Q%=9}=AQ%=9L°1}…’πΩµ¡±ï·—…±}4»∞Äà¥µÖ’—Ω}•π±•πîà§(ç¡…ÖùµÑÅU9Q%=9}=AQ%=9L°1}…’πΩµ¡±ï·—…±}4»∞Äà¥µΩ¡—}ôΩ…}Õ¡ïïêà§()ŸΩ•êÅ1}…’πΩµ¡±ï·—…±}4»°5=Q=I}YÖ…Õ}–Ä©¡5Ω—Ω»§)Ï(ÄÄÄÅ…ïù•Õ—ï»Åô±ΩÖ–Ã…}–ÄÅç±Ö…≠î≈±¡°Ñ∞Åç±Ö…≠î≈	ï—ÑÏ(ÄÄÄÅ…ïù•Õ—ï»Åô±ΩÖ–Ã…}–ÄÅ¡Ö…¨≈M•πî∞Å¡Ö…¨≈ΩÕ•πîÏ(ÄÄÄÅ…ïù•Õ—ï»Åô±ΩÖ–Ã…}–ÄÅ¡••ëå∞Å¡••ëÃÏ(ÄÄÄÅMY8…}–ÄÄÄÄÄÄÄÄÄÄÄÅÕŸùï∏»Ï((ÄÄÄÄºº(ÄÄÄÄººÄÅ5I<Å—ºÄË¥(ÄÄÄÄººÄÄÄÄÄÄƒ∏Å…ïÖêÅE@Å¡ΩÕ•—•Ω∏(ÄÄÄÄººÄÄÄÄÄÄ»∏Åùï–Åç’……ïπ–ÅôïïêÅâÖç¨(ÄÄÄÄººÄÄÄÄÄÄÃ∏ÅëºÅ—°îÅ±Ö…≠î(ÄÄÄÄºº(ÄÄÄÅ4…}1}A=M%Q%=9}UII9Q}1I-}5I<†§Ï((ÄÄÄÄºº(ÄÄÄÄººÄÄÄÅAI,ÅQ…ÖπÕôΩ…µÖ—•Ω∏(ÄÄÄÄººÄÄÄÅΩππïç–Å•π¡’—ÃÅΩòÅ—°îÅ5A1`ÅµΩë’±îÅÖπêÅçÖ±∞Å—°îÅ5A1`ÅçΩπ—…Ω±±ï»(ÄÄÄÄºº(ÄÄÄÅôç±YÖ…Õl≈tπE}ç±Ñπ•≈…»ÄÙÅôç±YÖ…Õl≈tπ¡•}•ƒπ…ïòÄ¥(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ†°ç±Ö…≠î≈	ï—ÑÄ®Å¡Ö…¨≈ΩÕ•πî§Ä¥Ä°ç±Ö…≠î≈±¡°ÑÄ®Å¡Ö…¨≈M•πî§§Ï(ÄÄÄÅôç±YÖ…Õl≈tπE}ç±Ñπ•ë…»ÄÙÅ¡5Ω—Ω»¥˘¡•}•êπ…ïòÄ¥(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ†°ç±Ö…≠î≈±¡°ÑÄ®Å¡Ö…¨≈ΩÕ•πî§Ä¨Ä°ç±Ö…≠î≈	ï—ÑÄ®Å¡Ö…¨≈M•πî§§Ï((ÄÄÄÄºº(ÄÄÄÄººÅΩππïç–Å•π¡’—ÃÅΩòÅ—°îÅÅµΩë’±îÅÖπêÅçÖ±∞Å—°îÅÅçΩπ—…Ω±±ï»ÅµÖç…º(ÄÄÄÄºº(ÄÄÄÄººÅMQA%<ƒ·}!% ÏÄÄººÅΩπ±‰ÅôΩ»Åëïâ’ú(ÄÄÄÅ±Ñ≈Ω…çïQÖÕ¨‹†§ÏÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄººÅ%ƒÅ±ΩΩ¿Ä¥ÅçΩµ¡±ï‡ÅçΩπ—…Ω∞Ä¥Å1Å—ÖÕ¨Ä‹(ÄÄÄÄººÅMQA%<ƒ·}1=\ÏÄÄÄººÅΩπ±‰ÅôΩ»Åëïâ’ú((ÄÄÄÄºº(ÄÄÄÄººÅ%êÅ±ΩΩ¿Ä¥ÅçΩµ¡±ï‡ÅçΩπ—…Ω∞Ä¥ÅAT(ÄÄÄÄººÅçΩµ¡±ï·—…∞°¡5Ω—Ω»§Ï(ÄÄÄÄºº(ÄÄÄÅ¡5Ω—Ω»¥˘¡•}•êπΩ’–Ä¨ÙÅ¡5Ω—Ω»¥˘}ç¡‘π≠•…ïç–Ä®(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ°ôç±YÖ…Õl≈tπE}ç±Ñπ•ë…»Ä®Å¡5Ω—Ω»¥˘}ç¡‘πçΩÕ]QÃÄ¥(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅôç±YÖ…Õl≈tπE}ç±Ñπ•≈…»Ä®Å¡5Ω—Ω»¥˘}ç¡‘πÕ•π]QÃ§Ä¨(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅ¡5Ω—Ω»¥˘}ç¡‘πçÖ……Â=Ÿï»ÄÏ((ÄÄÄÅ15A}5I<°¡5Ω—Ω»¥˘¡•}•ê§Ï((ÄÄÄÅ¡••ëåÄÙÅ¡5Ω—Ω»¥˘¡•}•êπΩ’–Ä®Å¡Ö…¨≈ΩÕ•πîÏ(ÄÄÄÅ¡••ëÃÄÙÅ¡5Ω—Ω»¥˘¡•}•êπΩ’–Ä®Å¡Ö…¨≈M•πîÏ((ÄÄÄÄºº(ÄÄÄÄººÄÅ]Ö•–ÅôΩ»Å5A1`Å%DÅçÖ±åÅ•∏Å1Å—ÖÕ¨Ä‹Å—ºÅçΩµ¡±ï—î(ÄÄÄÄºº(ÄÄÄÄººÅMQA%<ƒ·}!% ÏÄÄÄÄÄÄººÅΩπ±‰ÅôΩ»Åëïâ’ú(ÄÄÄÅ›°•±î†°!]I °A%QI1}	MÄ¨ÅA%}=}%Hƒƒ§ÄòÅA%}%Hƒ≈}%9Q`‹§ÄÙÙÅôÖ±Õî§Ï(ÄÄÄÄººÅMQA%<ƒ·}1=\ÏÄÄÄÄÄÄÄººÅΩπ±‰ÅôΩ»Åëïâ’ú((ÄÄÄÄºº(ÄÄÄÄººÄÅAï…ôΩ…¥Å—°îÅ•πŸï…ÕîÅ¡Ö…¨ÅÖπêÅçΩππïç–Å•π¡’—ÃÅΩòÅ—°îÅMY9}DÅµΩë’±î(ÄÄÄÄºº(ÄÄÄÅÕŸùï∏»πUÖ±¡°ÑÄÙÄ†Å¡••ëåÄ¥Ä°ôç±YÖ…Õl≈tπ¡•}•ƒπΩ’–Ä®Å¡Ö…¨≈M•πî§§Ä®(ÄÄÄÄÄÄÄÄÄÄÄÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπçÖ……•ï…5•êÏ((ÄÄÄÅÕŸùï∏»πUâï—ÑÄÙÄ†°ôç±YÖ…Õl≈tπ¡•}•ƒπΩ’–Ä®Å¡Ö…¨≈ΩÕ•πî§Ä¨Å¡••ëÃ§Ä®(ÄÄÄÄÄÄÄÄÄÄÄÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπçµ•ëÕ≈…–ÃÏ((ÄÄÄÄºº(ÄÄÄÄººÄÅ5I<Å—ºÄË¥(ÄÄÄÄººÄÄÄÄÄÄƒ∏ÅëºÅMY8(ÄÄÄÄººÄÄÄÄÄÄ»∏ÅëºÅA]5’¡ëÖ—ïÃ(ÄÄÄÄºº(ÄÄÄÅ1}MY9}A]5}AQ}5I<†§Ï((ÄÄÄÅI}1}=U9Q}4»Ï((ÄÄÄÅ…ï—’…∏Ï)Ù((ºº(ººÅ]…Ö¿Å’¿Åô’πç—•Ω∏Å—ºÅâîÅçÖ±±ïêÅâ‰Å—°îÅ’Õï»ÅÖ¡¡±•çÖ—•Ω∏ÅÖ–Å—°îÅçΩµ¡±ï—•Ω∏ÅΩò(ººÅÖÕ–Å’……ïπ–Å1ΩΩ¿Å•∏ÅΩµ¡±ï‡ÅΩπ—…Ω∞Å5Ωëî(ºº(ç¡…ÖùµÑÅ=}1%8°1}…’πΩµ¡±ï·—…±]…Ö¡}4»∞Ä»§(ç¡…ÖùµÑÅU9Q%=9}=AQ%=9L°1}…’πΩµ¡±ï·—…±]…Ö¡}4»∞Äà¥µÖ’—Ω}•π±•πîà§(ç¡…ÖùµÑÅU9Q%=9}=AQ%=9L°1}…’πΩµ¡±ï·—…±]…Ö¡}4»∞Äà¥µΩ¡—}ôΩ…}Õ¡ïïêà§()ŸΩ•êÅ1}…’πΩµ¡±ï·—…±]…Ö¡}4»°5=Q=I}YÖ…Õ}–Ä©¡5Ω—Ω»§)Ï(ÄÄÄÅô±ΩÖ–Ã…}–ÅYâÖÕîÄÄÄÄÙÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπYëçâ’ÃÄ®Äƒ∏ƒ‘ÄºÄ»Ï(ÄÄÄÅô±ΩÖ–Ã…}–Å•πŸiâÖÕîÄÙÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ%âÖÕîÄºÅYâÖÕîÏ((ÄÄÄÅô±ΩÖ–Ã…}–Å]QÃÄÄÄÄÄÄÙÅ¡5Ω—Ω»¥˘Õ¡ïïêπM¡ïïêÄ®(ÄÄÄÄÄÄÄÄÄÄÄÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ]âÖÕîÄ®Å¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ—MÖµ¿Ï((ÄÄÄÄºº(ÄÄÄÄººÄÅ1}ôΩ…çïQÖÕ≠Ã°1≈}	M∞Å1}QM-1|‡§Ï(ÄÄÄÄºº(ÄÄÄÅ±Ñ≈Ω…çïQÖÕ¨‡†§ÏÄÄÄÄÄÄÄÄÄÄÄººÅ1Å—ÖÕ¨‡((ÄÄÄÅ¡5Ω—Ω»¥˘}ç¡‘πçΩÕ]QÃÄÄÙÅ}}çΩÃ°]QÃ§Ï(ÄÄÄÅôç±YÖ…Õl≈tπE}ç±ÑπçΩÕ]QÃÄÙÅ¡5Ω—Ω»¥˘}ç¡‘πçΩÕ]QÃÏ((ÄÄÄÅ¡5Ω—Ω»¥˘}ç¡‘πÕ•π]QÃÄÄÙÅ}}Õ•∏°]QÃ§Ï(ÄÄÄÅôç±YÖ…Õl≈tπE}ç±ÑπÕ•π]QÃÄÙÅ¡5Ω—Ω»¥˘}ç¡‘πÕ•π]QÃÏ((ÄÄÄÅ¡5Ω—Ω»¥˘}ç¡‘πï·¡YÖ∞ÄÙ(ÄÄÄÄÄÄÄÄÄÄÄÅï·¡ò†¥°¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπIêÄºÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ1ê§Ä®(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ—MÖµ¿§Ï((ÄÄÄÅôç±YÖ…Õl≈tπE}ç±Ñπï·¡YÖ∞ÄÙ(ÄÄÄÄÄÄÄÄÄÄÄÅï·¡ò†¥°¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπIƒÄºÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ1ƒ§Ä®(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ—MÖµ¿§Ï((ÄÄÄÅ¡5Ω—Ω»¥˘}ç¡‘π≠•…ïç–ÄÙÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπIêÄ®Å•πŸiâÖÕîÄ®(ÄÄÄÄÄÄÄÄÄÄÄÅ}}Õ≈…–†»∏¡Ä¥Ä»∏¡Ä®Å}}çΩÃ°¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ›ççÄ®(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ—MÖµ¿§§Äº(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ†ƒ∏¡Ä¥Å¡5Ω—Ω»¥˘}ç¡‘πï·¡YÖ∞§Ï((ÄÄÄÅôç±YÖ…Õl≈tπE}ç±Ñπ≠•…ïç–ÄÙÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπIƒÄ®Å•πŸiâÖÕîÄ®(ÄÄÄÄÄÄÄÄÄÄÄÅ}}Õ≈…–†»∏¡Ä¥Ä»∏¡Ä®Å}}çΩÃ°¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ›ççDÄ®(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅ¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ—MÖµ¿§§Äº(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ†ƒ∏¡Ä¥Åôç±YÖ…Õl≈tπE}ç±Ñπï·¡YÖ∞§Ï((ÄÄÄÄºº(ÄÄÄÄººÅQºÅÕÖŸîÅATÅçÂç±ïÃÅÖπêÅÕ¡ïïêÅ’¿ÅçÖ±ç∏∞ÅçÖ……‰ÅΩŸï»ÅµÖ—†Å•ÃÅëΩπîÅ›•—°•∏(ÄÄÄÄººÄÄÄÅ—°•ÃÅ›…Ö¿Åô’πç—•Ω∏ÅÖπêÄùçÖ……Â=Ÿï»úÅçÖ……•ïÃÅ•–Å—ºÅ—°îÅπï·–Å•—ï…Ö—•Ω∏(ÄÄÄÄººÅ	ïµòÅçÖ±åÅ•ÃÅ…Ω±±ïêÅ•∏Å—ºÅ—°îÅDÅçÖ±çÃÅÖÃÅ—°îÅÕ¡ïïêÅÖπêÅô±’‡ÅëΩïÃÅπΩ–(ÄÄÄÄººÄÄÄÅç°ÖπùîÅµ’ç†Åâï—›ïï∏Å•—ï…Ö—•ΩπÃÄ¥Åï≈’Ö—•Ω∏Å—›ïÖ≠ïêÅ—ºÅô•–Å°ï…î(ÄÄÄÄºº(ÄÄÄÅ¡5Ω—Ω»¥˘}ç¡‘πçÖ……Â=Ÿï»ÄÙÄ¥°¡5Ω—Ω»¥˘}ç¡‘π≠•…ïç–Ä®(ÄÄÄÄÄÄÄÄÄÄÄÅôç±YÖ…Õl≈tπE}ç±Ñπ•ë…»Ä®Å¡5Ω—Ω»¥˘}ç¡‘πï·¡YÖ∞§Ï((ÄÄÄÅôç±YÖ…Õl≈tπE}ç±ÑπçÖ……Â=Ÿï»ÄÙÄ¥°ôç±YÖ…Õl≈tπE}ç±Ñπ≠•…ïç–Ä®(ÄÄÄÄÄÄÄÄÄÄÄÅôç±YÖ…Õl≈tπE}ç±Ñπ•≈…»Ä®Åôç±YÖ…Õl≈tπE}ç±Ñπï·¡YÖ∞§Ä¨(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ°¡5Ω—Ω»¥˘1}¡Ö…ÖµÃπ	ïµô,Ä®(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ°¡5Ω—Ω»¥˘Õ¡ïïêπM¡ïïêÄ¥Åôç±YÖ…Õl≈tπÕ¡ïïë]ïA…ïÿ§§Ï((ÄÄÄÅôç±YÖ…Õl≈tπÕ¡ïïë]ïA…ïÿÄÙÅ¡5Ω—Ω»¥˘Õ¡ïïêπM¡ïïêÏ((ÄÄÄÄºº(ÄÄÄÄººÅ—ºÅ¡ÖÕÃÅΩ∏Å—°îÅ•êÅÖπêÅ•ƒÅç’……ïπ–ÅôïïëâÖç¨ÅâÖç¨Å—ºÅ’Õï»∞(ÄÄÄÄººÅ’¡ëÖ—îÅ—°ï¥Å•∏Å—°îÅ›…Ö¿Åô’πç—•Ω∏(ÄÄÄÄºº(ÄÄÄÅ¡5Ω—Ω»¥˘¡•}•êπôâ¨ÄÙÅ¡5Ω—Ω»¥˘¡•}•êπ…ïòÄ¥Åôç±YÖ…Õl≈tπE}ç±Ñπ•ë…»Ï((ÄÄÄÅôç±YÖ…Õl≈tπ¡•}•ƒπôâ¨ÄÙÅôç±YÖ…Õl≈tπ¡•}•ƒπ…ïòÄ¥(ÄÄÄÄÄÄÄÄÄÄÄÅôç±YÖ…Õl≈tπE}ç±Ñπ•≈…»Ï((ÄÄÄÄºº(ÄÄÄÄººÅù•ŸîÅïπΩ’ù†Å—•µîÅâïôΩ…îÅç±ïÖ…•πúÅ%9Q‡‡ÅôΩ»Å1ÅQM,Ä‡ÅçΩµ¡±ï—•Ω∏(ÄÄÄÄºº(ÄÄÄÅ›°•±î†°!]I °A%QI1}	MÄ¨ÅA%}=}%Hƒƒ§ÄòÅA%}%Hƒ≈}%9Q`‡§ÄÙÙÅôÖ±Õî§Ï((ÄÄÄÄºº(ÄÄÄÄººÅç±ïÖ»Å1Å—ÖÕ¨Åô±ÖùÃÄ‘∞Ä‹ÅÖπêÄ‡(ÄÄÄÄºº(ÄÄÄÅ!]I °A%QI1}	MÄ¨ÅA%}=}%Hƒƒ§ÄòÙÅ¯°A%}%Hƒ≈}%9Q`‘Å(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅA%}%Hƒ≈}%9Q`‹Å(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅA%}%Hƒ≈}%9Q`‡Ä§Ï(ÄÄÄÅ…ï—’…∏Ï)Ù((ºº(ººÅïπêÅΩòÅ—°•ÃÅô•±î(ºº(
+/*                                                                             \
+* -----------------------------------------------------------------------------\
+* Computed Duty and Write to CMPA register                                     \
+* -----------------------------------------------------------------------------\
+*/                                                                             \
+    *(pMotor->pwmCompA) = (uint32_t)(svgen2.Tc);                               \
+    *(pMotor->pwmCompB) = (uint32_t)(svgen2.Ualpha);                           \
+    *(pMotor->pwmCompC) = (uint32_t)(svgen2.Tb);
+
+//
+// To do instrumentation from library use below
+//
+extern volatile uint16_t FCL_cycleCount[2];
+
+#define READ_FCL_COUNT_M1                                                      \
+    FCL_cycleCount[0] = HWREGH(M1_U_PWM_BASE + EPWM_O_TBCTR);
+
+#define READ_FCL_COUNT_M2                                                      \
+    FCL_cycleCount[1] = HWREGH(M2_U_PWM_BASE + EPWM_O_TBCTR);
+
+//
+//  Function to initialize PWMs for the FCL operation, this will be called by
+//  the user application during the initialization or setup process
+//
+void FCL_initPWM(MOTOR_Vars_t *ptrMotor,
+                 uint32_t basePhaseU, uint32_t basePhaseV, uint32_t basePhaseW)
+{
+    EPWM_disableCounterCompareShadowLoadMode(basePhaseU,
+                                             EPWM_COUNTER_COMPARE_A);
+
+    EPWM_disableCounterCompareShadowLoadMode(basePhaseV,
+                                             EPWM_COUNTER_COMPARE_A);
+
+    EPWM_disableCounterCompareShadowLoadMode(basePhaseW,
+                                             EPWM_COUNTER_COMPARE_A);
+
+    ptrMotor->pwmCompA = (uint32_t *)(basePhaseU + EPWM_O_CMPA);
+    ptrMotor->pwmCompB = (uint32_t *)(basePhaseV + EPWM_O_CMPA);
+    ptrMotor->pwmCompC = (uint32_t *)(basePhaseW + EPWM_O_CMPA);
+
+    return;
+}
+
+//
+// initialize ADC for 2 current sensors
+//
+void FCL_initADC_2I(MOTOR_Vars_t *ptrMotor, uint32_t basePhaseW,
+                    uint32_t resultBaseV, ADC_PPBNumber baseV_PPB,
+                    uint32_t resultBaseW, ADC_PPBNumber baseW_PPB)
+{
+    uint16_t ppbCurV, ppbCurW;
+
+    ppbCurV = (uint16_t)(ADC_PPBxRESULT_OFFSET_BASE + (uint16_t)baseV_PPB * 2);
+    ppbCurW = (uint16_t)(ADC_PPBxRESULT_OFFSET_BASE + (uint16_t)baseW_PPB * 2);
+
+    ptrMotor->curA_PPBRESULT = resultBaseV + ppbCurV;
+    ptrMotor->curB_PPBRESULT = resultBaseW + ppbCurW;
+
+    ptrMotor->AdcIntFlag = (union ADCINTFLG_REG *)(basePhaseW + ADC_O_INTFLG);
+
+    return;
+}
+
+//
+// initialize ADC for 3 current sensors
+//
+void FCL_initADC_3I(MOTOR_Vars_t *ptrMotor, uint32_t basePhaseW,
+                    uint32_t resultBaseA, ADC_PPBNumber baseA_PPB,
+                    uint32_t resultBaseB, ADC_PPBNumber baseB_PPB,
+                    uint32_t resultBaseC, ADC_PPBNumber baseC_PPB)
+{
+    uint16_t ppbCurA, ppbCurB, ppbCurC;
+
+    ppbCurA = (uint16_t)(ADC_PPBxRESULT_OFFSET_BASE + (uint16_t)baseA_PPB * 2);
+    ppbCurB = (uint16_t)(ADC_PPBxRESULT_OFFSET_BASE + (uint16_t)baseB_PPB * 2);
+    ppbCurC = (uint16_t)(ADC_PPBxRESULT_OFFSET_BASE + (uint16_t)baseC_PPB * 2);
+
+    ptrMotor->curA_PPBRESULT = resultBaseA + ppbCurA;
+    ptrMotor->curB_PPBRESULT = resultBaseB + ppbCurB;
+    ptrMotor->curC_PPBRESULT = resultBaseC + ppbCurC;
+
+    ptrMotor->AdcIntFlag = (union ADCINTFLG_REG *)(basePhaseW + ADC_O_INTFLG);
+
+    return;
+}
+
+//
+// initialize QEP
+//
+void FCL_initQEP(MOTOR_Vars_t *ptrMotor, const uint32_t baseA)
+{
+    ptrMotor->ptrFCL->ptrQEP = (struct EQEP_REGS *)baseA;
+
+    return;
+}
+
+//
+// This function is called to reset the FCL variables and is useful when user
+// wants to stop the motor and restart the motor
+//
+void FCL_resetController(MOTOR_Vars_t *ptrMotor)
+{
+    ptrMotor->pi_id.carryOver = 0;
+    ptrMotor->pi_id.out = 0;
+    ptrMotor->D_cpu.carryOver = 0;
+    ptrMotor->D_cpu.idErr = 0;
+    ptrMotor->D_cpu.iqErr = 0;
+
+    ptrMotor->ptrFCL->pi_iq.carryOver = 0;
+    ptrMotor->ptrFCL->pi_iq.out = 0;
+    ptrMotor->ptrFCL->Q_cla.carryOver = 0;
+    ptrMotor->ptrFCL->Q_cla.idErr = 0;
+    ptrMotor->ptrFCL->Q_cla.iqErr = 0;
+    ptrMotor->ptrFCL->speedWePrev = 0;
+}
+
+//
+//  This function returns a 32-bit constant and for this version the value
+//  returned is 0x00000006
+//  Ver   Date       Platform              Description   Location
+//   1   07/2016  IDDK / TMDSCNCDF28379D   Beta MSS      \FCL\v01_00_00_00
+//   2   03/2017  IDDK / TMDSCNCDF28379D   cSUITE GA     \FCL\v02_00_00_00
+//   3   11/2017  F28379DXL/ GaN/ DRV8305  Beta MSS      \FCL\v03_00_00_02
+//   4   03/2018  F28379DXL/ GaN/ DRV8305  cSUITE GA     \FCL_SFRA\v01_00_00_00
+//   5   03/2019  IDDK / TMDSCNCDF28379D   MCSDK_1
+//   6   06/2019  IDDK / TMDSCNCDF28379D   MCSDK_2
+//   7   09/2019  IDDK / F28838x/F2837x/F28004x, MCSDK_V21,
+//                                         support absolute encoder
+//   8   09/2019  LPD-F2837x/F28004x/GaN,   MCSDK_V21, dual motor control
+//
+uint32_t FCL_getSwVersion(void)
+{
+    //
+    // for this version return 0x00000008
+    //
+    return((uint32_t)(0x00000008));
+}
+
+//
+// FCL internal function called in the complex control API
+// This function implements the complex control algorithm
+//
+void complexCtrl_M1(MOTOR_Vars_t *pMotor)
+{
+    // SETGPIO18_HIGH; // only for debug
+
+    pMotor->pi_id.out += pMotor->D_cpu.kDirect *
+                         (fclVars[0].Q_cla.idErr * pMotor->D_cpu.cosWTs -
+                          fclVars[0].Q_cla.iqErr * pMotor->D_cpu.sinWTs) +
+                          pMotor->D_cpu.carryOver ;
+
+    CLAMP_MACRO(pMotor->pi_id);
+
+    // SETGPIO18_LOW; // only for debug
+
+    return;
+}
+
+void complexCtrl_M2(MOTOR_Vars_t *pMotor)
+{
+    // SETGPIO18_HIGH; // only for debug
+
+    pMotor->pi_id.out += pMotor->D_cpu.kDirect *
+                         (fclVars[1].Q_cla.idErr * pMotor->D_cpu.cosWTs -
+                          fclVars[1].Q_cla.iqErr * pMotor->D_cpu.sinWTs) +
+                          pMotor->D_cpu.carryOver ;
+
+    CLAMP_MACRO(pMotor->pi_id);
+
+    // SETGPIO18_LOW; // only for debug
+
+    return;
+}
+
+//
+// Function that performs the PI Control as part of the Fast Current Loop
+//
+#pragma CODE_ALIGN(FCL_runPICtrl_M1, 2)
+#pragma FUNCTION_OPTIONS(FCL_runPICtrl_M1, "--auto_inline")
+#pragma FUNCTION_OPTIONS(FCL_runPICtrl_M1, "--opt_for_speed")
+
+void FCL_runPICtrl_M1(MOTOR_Vars_t *pMotor)
+{
+    register float32_t  clarke1Alpha, clarke1Beta;
+    register float32_t  park1Sine, park1Cosine;
+    SVGEN2_t            svgen2;
+
+    //
+    //  MACRO to :-
+    //      1. read QEP position
+    //      2. get current feed back
+    //      3. do the Clarke
+    //
+    M1_FCL_POSITION_CURRENT_CLARKE_MACRO();
+
+    //
+    //  PARK Transformation
+    //  Connect inputs of the PI module and
+    //  call the PI IQ controller macro in CLA
+    //
+    fclVars[0].pi_iq.err = fclVars[0].pi_iq.ref -
+                ((clarke1Beta * park1Cosine) - (clarke1Alpha * park1Sine));
+
+    pMotor->pi_id.err = pMotor->pi_id.ref -
+                ((clarke1Alpha * park1Cosine) + (clarke1Beta * park1Sine));
+
+    //
+    // Connect inputs of the PI module and call the PI ID controller macro
+    // CLA_forceTasks(CLA1_BASE, CLA_TASKFLAG_2);
+    //
+    Cla1ForceTask2();
+
+    FCL_PI_MACRO(pMotor->pi_id)             // Id loop - PI controller - CPU
+
+    register float32_t  piidc, piids;
+
+    piidc = pMotor->pi_id.out * park1Cosine;
+    piids = pMotor->pi_id.out * park1Sine;
+
+    //
+    //  Wait for PI IQ calc in CLA (CLA1_2) to complete
+    //
+    // SETGPIO18_HIGH; // only for debug
+    while((HWREGH(PIECTRL_BASE + PIE_O_IFR11) & PIE_IFR11_INTX2) == false);
+    // SETGPIO18_LOW;  // only for debug
+
+    //
+    //  Perform the inverse park and connect inputs of the SVGEN_DQ module
+    //
+    svgen2.Ualpha = ( piidc - (fclVars[0].pi_iq.out * park1Sine)) *
+            pMotor->FCL_params.carrierMid;
+
+    svgen2.Ubeta  = ((fclVars[0].pi_iq.out * park1Cosine) + piids) *
+            pMotor->FCL_params.cmidsqrt3;
+
+    //
+    //  MACRO to :-
+    //      1. do SVGEN
+    //      2. do PWMupdates
+    //
+    FCL_SVGEN_PWM_PDATE_MACRO();
+
+    READ_FCL_COUNT_M1;
+
+    return;
+}
+
+//
+//  Wrap up function to be called by the user application at the completion of
+// Fast Current Loop in PI Control Mode
+//
+#pragma CODE_ALIGN(FCL_runPICtrlWrap_M1, 2)
+#pragma FUNCTION_OPTIONS(FCL_runPICtrlWrap_M1, "--auto_inline")
+#pragma FUNCTION_OPTIONS(FCL_runPICtrlWrap_M1, "--opt_for_speed")
+
+void FCL_runPICtrlWrap_M1(MOTOR_Vars_t *pMotor)
+{
+    float32_t Vbase = pMotor->FCL_params.Vdcbus * 1.15 / 2;
+    float32_t invZbase = pMotor->FCL_params.Ibase / Vbase;
+
+    //
+    // To save CPU cycles and speed up calcn, carry over math is done within
+    //   this wrap function and .CarryOver carries it to the next iteration
+    // Bemf calc is rolled in to the Q calcs as the speed and flux does not
+    //   change much between iterations - equation tweaked to fit here
+    //
+
+    //
+    //  CLA_forceTasks(CLA1_BASE, CLA_TASKFLAG_4);
+    //
+    Cla1ForceTask4();
+
+    //
+    // Update PI ID parameters
+    //
+    pMotor->pi_id.Kp = pMotor->FCL_params.Ld * invZbase *
+            pMotor->FCL_params.wccD;
+
+    pMotor->pi_id.Ki = pMotor->FCL_params.Rd * invZbase *
+            pMotor->FCL_params.wccD * pMotor->FCL_params.tSamp;
+
+    pMotor->pi_id.Kerr = (pMotor->pi_id.Ki * 0.5F) + pMotor->pi_id.Kp;
+    pMotor->pi_id.KerrOld = (pMotor->pi_id.Ki * 0.5F) - pMotor->pi_id.Kp;
+    pMotor->pi_id.carryOver = (pMotor->pi_id.err * pMotor->pi_id.KerrOld);
+
+    //
+    // Update PI IQ parameters
+    //
+    fclVars[0].pi_iq.Kp = pMotor->FCL_params.Lq * invZbase *
+            pMotor->FCL_params.wccQ;
+    fclVars[0].pi_iq.Ki = pMotor->FCL_params.Rq * invZbase *
+            pMotor->FCL_params.wccQ * pMotor->FCL_params.tSamp;
+
+    fclVars[0].pi_iq.Kerr = (fclVars[0].pi_iq.Ki * 0.5) +
+            fclVars[0].pi_iq.Kp;
+
+    fclVars[0].pi_iq.KerrOld = (fclVars[0].pi_iq.Ki * 0.5) -
+            fclVars[0].pi_iq.Kp;
+
+    fclVars[0].pi_iq.carryOver = (fclVars[0].pi_iq.err *
+            fclVars[0].pi_iq.KerrOld) +
+                   ( pMotor->FCL_params.BemfK *
+                           (pMotor->speed.Speed - fclVars[0].speedWePrev));
+
+    fclVars[0].speedWePrev = pMotor->speed.Speed;
+
+    //
+    // to pass on the id and iq current feedback back to user,
+    // update them in the wrap function
+    //
+    pMotor->pi_id.fbk = pMotor->pi_id.ref - pMotor->pi_id.err;
+
+    fclVars[0].pi_iq.fbk = fclVars[0].pi_iq.ref -
+            fclVars[0].pi_iq.err;
+
+    //
+    //give enough time before clearing INTx4 for CLA TASK 4 completion
+    //
+    while((HWREGH(PIECTRL_BASE + PIE_O_IFR11) & PIE_IFR11_INTX4) == false);
+
+    //
+    // clear CLA task flags 1, 2, and 4
+    //
+    HWREGH(PIECTRL_BASE + PIE_O_IFR11) &= ~(PIE_IFR11_INTX1 |
+                                            PIE_IFR11_INTX2 |
+                                            PIE_IFR11_INTX4 );
+    return;
+}
+
+//
+// The functions for motor_1, task 1, 2, 3, and 4 for motor_1
+//
+
+//
+// Function that performs the Complex control as part of the Fast Current Loop
+//
+#pragma CODE_ALIGN(FCL_runComplexCtrl_M1, 2)
+#pragma FUNCTION_OPTIONS(FCL_runComplexCtrl_M1, "--auto_inline")
+#pragma FUNCTION_OPTIONS(FCL_runComplexCtrl_M1, "--opt_for_speed")
+
+void FCL_runComplexCtrl_M1(MOTOR_Vars_t *pMotor)
+{
+    register float32_t  clarke1Alpha, clarke1Beta;
+    register float32_t  park1Sine, park1Cosine;
+    register float32_t  piidc, piids;
+    SVGEN2_t            svgen2;
+
+    //
+    //  MACRO to :-
+    //      1. read QEP position
+    //      2. get current feed back
+    //      3. do the Clarke
+    //
+    M1_FCL_POSITION_CURRENT_CLARKE_MACRO();
+
+    //
+    //    PARK Transformation
+    //    Connect inputs of the CMPLX module and call the CMPLX controller
+    //
+    fclVars[0].Q_cla.iqErr = fclVars[0].pi_iq.ref -
+                  ((clarke1Beta * park1Cosine) - (clarke1Alpha * park1Sine));
+    fclVars[0].Q_cla.idErr = pMotor->pi_id.ref -
+                  ((clarke1Alpha * park1Cosine) + (clarke1Beta * park1Sine));
+
+    // SETGPIO18_HIGH; // only for debug
+    Cla1ForceTask3();               // Iq loop - complex control - CLA
+    // SETGPIO18_LOW;  //only for debug
+
+    //
+    // Id loop - complex control - CPU
+    //  complexCtrl(pMotor);
+    //
+    pMotor->pi_id.out += pMotor->D_cpu.kDirect *
+                         (fclVars[0].Q_cla.idErr * pMotor->D_cpu.cosWTs -
+                          fclVars[0].Q_cla.iqErr * pMotor->D_cpu.sinWTs) +
+                          pMotor->D_cpu.carryOver;
+
+    CLAMP_MACRO(pMotor->pi_id);
+
+    piidc = pMotor->pi_id.out * park1Cosine;
+    piids = pMotor->pi_id.out * park1Sine;
+
+    //
+    //  Wait for CMPLX IQ calc in CLA to complete
+    //
+    // SETGPIO18_HIGH;  // only for debug
+    while((HWREGH(PIECTRL_BASE + PIE_O_IFR11) & PIE_IFR11_INTX3) == false);
+    // SETGPIO18_LOW;   // only for debug
+
+    //
+    //  Perform the inverse park and connect inputs of the SVGEN_DQ module
+    //
+    svgen2.Ualpha = ( piidc - (fclVars[0].pi_iq.out * park1Sine)) *
+            pMotor->FCL_params.carrierMid;
+
+    svgen2.Ubeta = ((fclVars[0].pi_iq.out * park1Cosine) + piids) *
+            pMotor->FCL_params.cmidsqrt3;
+
+    //
+    //  MACRO to :-
+    //      1. do SVGEN
+    //      2. do PWMupdates
+    //
+    FCL_SVGEN_PWM_PDATE_MACRO();
+
+    READ_FCL_COUNT_M1;
+
+    return;
+}
+
+//
+// Wrap up function to be called by the user application at the completion of
+// Fast Current Loop in Complex Control Mode
+//
+#pragma CODE_ALIGN(FCL_runComplexCtrlWrap_M1, 2)
+#pragma FUNCTION_OPTIONS(FCL_runComplexCtrlWrap_M1, "--auto_inline")
+#pragma FUNCTION_OPTIONS(FCL_runComplexCtrlWrap_M1, "--opt_for_speed")
+
+void FCL_runComplexCtrlWrap_M1(MOTOR_Vars_t *pMotor)
+{
+    float32_t Vbase    = pMotor->FCL_params.Vdcbus * 1.15 / 2;
+    float32_t invZbase = pMotor->FCL_params.Ibase / Vbase;
+
+    float32_t WTs      = pMotor->speed.Speed *
+            pMotor->FCL_params.Wbase * pMotor->FCL_params.tSamp;
+
+    //
+    //  CLA_forceTasks(CLA1_BASE, CLA_TASKFLAG_4);
+    //
+    Cla1ForceTask4();
+
+    pMotor->D_cpu.cosWTs  = __cos(WTs);
+    fclVars[0].Q_cla.cosWTs = pMotor->D_cpu.cosWTs;
+
+    pMotor->D_cpu.sinWTs  = __sin(WTs);
+    fclVars[0].Q_cla.sinWTs = pMotor->D_cpu.sinWTs;
+
+    pMotor->D_cpu.expVal =
+            expf(-(pMotor->FCL_params.Rd / pMotor->FCL_params.Ld) *
+                 pMotor->FCL_params.tSamp);
+
+    fclVars[0].Q_cla.expVal =
+            expf(-(pMotor->FCL_params.Rq / pMotor->FCL_params.Lq) *
+                 pMotor->FCL_params.tSamp);
+
+    pMotor->D_cpu.kDirect = pMotor->FCL_params.Rd * invZbase *
+            __sqrt(2.0F - 2.0F * __cos(pMotor->FCL_params.wccD *
+                                       pMotor->FCL_params.tSamp)) /
+                                       (1.0F - pMotor->D_cpu.expVal);
+
+    fclVars[0].Q_cla.kDirect = pMotor->FCL_params.Rq * invZbase *
+            __sqrt(2.0F - 2.0F * __cos(pMotor->FCL_params.wccQ *
+                                      pMotor->FCL_params.tSamp)) /
+                                      (1.0F - fclVars[0].Q_cla.expVal);
+
+    //
+    // To save CPU cycles and speed up calcn, carry over math is done within
+    //    this wrap function and 'carryOver' carries it to the next iteration
+    // Bemf calc is rolled in to the Q calcs as the speed and flux does not
+    //    change much between iterations - equation tweaked to fit here
+    //
+    pMotor->D_cpu.carryOver = -(pMotor->D_cpu.kDirect *
+            fclVars[0].Q_cla.idErr * pMotor->D_cpu.expVal);
+
+    fclVars[0].Q_cla.carryOver = -(fclVars[0].Q_cla.kDirect *
+            fclVars[0].Q_cla.iqErr * fclVars[0].Q_cla.expVal) +
+                    (pMotor->FCL_params.BemfK *
+                           (pMotor->speed.Speed - fclVars[0].speedWePrev));
+
+    fclVars[0].speedWePrev = pMotor->speed.Speed;
+
+    //
+    // to pass on the id and iq current feedback back to user,
+    // update them in the wrap function
+    //
+    pMotor->pi_id.fbk = pMotor->pi_id.ref - fclVars[0].Q_cla.idErr;
+
+    fclVars[0].pi_iq.fbk = fclVars[0].pi_iq.ref -
+            fclVars[0].Q_cla.iqErr;
+
+    //
+    //give enough time before clearing INTx4 for CLA TASK 4 completion
+    //
+    while((HWREGH(PIECTRL_BASE + PIE_O_IFR11) & PIE_IFR11_INTX4) == false);
+
+    //
+    // clear CLA task flags 1, 3 and 4
+    //
+    HWREGH(PIECTRL_BASE + PIE_O_IFR11) &= ~(PIE_IFR11_INTX1 |
+                                            PIE_IFR11_INTX3 |
+                                            PIE_IFR11_INTX4 );
+    return;
+}
+
+//
+// Function that performs the PI Control as part of the Fast Current Loop
+//
+#pragma CODE_ALIGN(FCL_runPICtrl_M2, 2)
+#pragma FUNCTION_OPTIONS(FCL_runPICtrl_M2, "--auto_inline")
+#pragma FUNCTION_OPTIONS(FCL_runPICtrl_M2, "--opt_for_speed")
+
+void FCL_runPICtrl_M2(MOTOR_Vars_t *pMotor)
+{
+    register float32_t  clarke1Alpha, clarke1Beta;
+    register float32_t  park1Sine, park1Cosine;
+    SVGEN2_t            svgen2;
+
+    //
+    //  MACRO to :-
+    //      1. read QEP position
+    //      2. get current feed back
+    //      3. do the Clarke
+    //
+    M2_FCL_POSITION_CURRENT_CLARKE_MACRO();
+
+    //
+    //  PARK Transformation
+    //  Connect inputs of the PI module and
+    //  call the PI IQ controller macro in CLA
+    //
+    fclVars[1].pi_iq.err = fclVars[1].pi_iq.ref -
+                ((clarke1Beta * park1Cosine) - (clarke1Alpha * park1Sine));
+
+    pMotor->pi_id.err = pMotor->pi_id.ref -
+                ((clarke1Alpha * park1Cosine) + (clarke1Beta * park1Sine));
+
+    //
+    //    Connect inputs of the PI module and call the PI ID controller macro
+    //  CLA_forceTasks(CLA1_BASE, CLA_TASKFLAG_6);
+    //
+    Cla1ForceTask6();
+
+    FCL_PI_MACRO(pMotor->pi_id)             // Id loop - PI controller - CPU
+
+    register float32_t  piidc, piids;
+
+    piidc = pMotor->pi_id.out * park1Cosine;
+    piids = pMotor->pi_id.out * park1Sine;
+
+    //
+    //  Wait for PI IQ calc in CLA (CLA1_6) to complete
+    //
+    // SETGPIO18_HIGH; // only for debug
+    while((HWREGH(PIECTRL_BASE + PIE_O_IFR11) & PIE_IFR11_INTX6) == false);
+    // SETGPIO18_LOW;  // only for debug
+
+    //
+    //  Perform the inverse park and connect inputs of the SVGEN_DQ module
+    //
+    svgen2.Ualpha = ( piidc - (fclVars[1].pi_iq.out * park1Sine)) *
+            pMotor->FCL_params.carrierMid;
+
+    svgen2.Ubeta  = ((fclVars[1].pi_iq.out * park1Cosine) + piids) *
+            pMotor->FCL_params.cmidsqrt3;
+
+    //
+    //  MACRO to :-
+    //      1. do SVGEN
+    //      2. do PWMupdates
+    //
+    FCL_SVGEN_PWM_PDATE_MACRO();
+
+    READ_FCL_COUNT_M2;
+
+    return;
+}
+
+//
+// Duplicate the functions for motor_2, but change some codes for CLA tasks
+// trigger and its status check
+// task 5, 6, 7, and 8 for motor_2
+//
+
+//
+//  Wrap up function to be called by the user application at the completion of
+// Fast Current Loop in PI Control Mode
+//
+#pragma CODE_ALIGN(FCL_runPICtrlWrap_M2, 2)
+#pragma FUNCTION_OPTIONS(FCL_runPICtrlWrap_M2, "--auto_inline")
+#pragma FUNCTION_OPTIONS(FCL_runPICtrlWrap_M2, "--opt_for_speed")
+
+void FCL_runPICtrlWrap_M2(MOTOR_Vars_t *pMotor)
+{
+    float32_t Vbase = pMotor->FCL_params.Vdcbus * 1.15 / 2;
+    float32_t invZbase = pMotor->FCL_params.Ibase / Vbase;
+
+    //
+    // To save CPU cycles and speed up calcn, carry over math is done within
+    //   this wrap function and .CarryOver carries it to the next iteration
+    // Bemf calc is rolled in to the Q calcs as the speed and flux does not
+    //   change much between iterations - equation tweaked to fit here
+    //
+
+    //
+    //  CLA_forceTasks(CLA1_BASE, CLA_TASKFLAG_8);
+    //
+    Cla1ForceTask8();
+
+    //
+    // Update PI ID parameters
+    //
+    pMotor->pi_id.Kp = pMotor->FCL_params.Ld * invZbase *
+            pMotor->FCL_params.wccD;
+
+    pMotor->pi_id.Ki = pMotor->FCL_params.Rd * invZbase *
+            pMotor->FCL_params.wccD * pMotor->FCL_params.tSamp;
+
+    pMotor->pi_id.Kerr = (pMotor->pi_id.Ki * 0.5F) + pMotor->pi_id.Kp;
+    pMotor->pi_id.KerrOld = (pMotor->pi_id.Ki * 0.5F) - pMotor->pi_id.Kp;
+    pMotor->pi_id.carryOver = (pMotor->pi_id.err * pMotor->pi_id.KerrOld);
+
+    //
+    // Update PI IQ parameters
+    //
+    fclVars[1].pi_iq.Kp = pMotor->FCL_params.Lq * invZbase *
+            pMotor->FCL_params.wccQ;
+    fclVars[1].pi_iq.Ki = pMotor->FCL_params.Rq * invZbase *
+            pMotor->FCL_params.wccQ * pMotor->FCL_params.tSamp;
+
+    fclVars[1].pi_iq.Kerr = (fclVars[1].pi_iq.Ki * 0.5) +
+            fclVars[1].pi_iq.Kp;
+
+    fclVars[1].pi_iq.KerrOld = (fclVars[1].pi_iq.Ki * 0.5) -
+            fclVars[1].pi_iq.Kp;
+
+    fclVars[1].pi_iq.carryOver = (fclVars[1].pi_iq.err *
+            fclVars[1].pi_iq.KerrOld) +
+                   ( pMotor->FCL_params.BemfK *
+                          (pMotor->speed.Speed - fclVars[1].speedWePrev));
+
+    fclVars[1].speedWePrev = pMotor->speed.Speed;
+
+    //
+    // to pass on the id and iq current feedback back to user,
+    // update them in the wrap function
+    //
+    pMotor->pi_id.fbk = pMotor->pi_id.ref - pMotor->pi_id.err;
+
+    fclVars[1].pi_iq.fbk =  fclVars[1].pi_iq.ref -
+            fclVars[1].pi_iq.err;
+
+    //
+    // give enough time before clearing INTx8 for CLA task 8 completion
+    //
+    while((HWREGH(PIECTRL_BASE + PIE_O_IFR11) & PIE_IFR11_INTX8) == false);
+
+    //
+    // clear CLA task flags 5, 6, and 8
+    //
+    HWREGH(PIECTRL_BASE + PIE_O_IFR11) &= ~(PIE_IFR11_INTX5 |
+                                            PIE_IFR11_INTX6 |
+                                            PIE_IFR11_INTX8 );
+    return;
+}
+
+
+//
+// Function that performs the Complex control as part of the Fast Current Loop
+//
+#pragma CODE_ALIGN(FCL_runComplexCtrl_M2, 2)
+#pragma FUNCTION_OPTIONS(FCL_runComplexCtrl_M2, "--auto_inline")
+#pragma FUNCTION_OPTIONS(FCL_runComplexCtrl_M2, "--opt_for_speed")
+
+void FCL_runComplexCtrl_M2(MOTOR_Vars_t *pMotor)
+{
+    register float32_t  clarke1Alpha, clarke1Beta;
+    register float32_t  park1Sine, park1Cosine;
+    register float32_t  piidc, piids;
+    SVGEN2_t            svgen2;
+
+    //
+    //  MACRO to :-
+    //      1. read QEP position
+    //      2. get current feed back
+    //      3. do the Clarke
+    //
+    M2_FCL_POSITION_CURRENT_CLARKE_MACRO();
+
+    //
+    //    PARK Transformation
+    //    Connect inputs of the CMPLX module and call the CMPLX controller
+    //
+    fclVars[1].Q_cla.iqErr = fclVars[1].pi_iq.ref -
+                  ((clarke1Beta * park1Cosine) - (clarke1Alpha * park1Sine));
+    fclVars[1].Q_cla.idErr = pMotor->pi_id.ref -
+                  ((clarke1Alpha * park1Cosine) + (clarke1Beta * park1Sine));
+
+    //
+    // Connect inputs of the CC module and call the CC controller macro
+    //
+    // SETGPIO18_HIGH;  // only for debug
+    Cla1ForceTask7();               // Iq loop - complex control - CLA task 7
+    // SETGPIO18_LOW;   // only for debug
+
+    //
+    // Id loop - complex control - CPU
+    // complexCtrl(pMotor);
+    //
+    pMotor->pi_id.out += pMotor->D_cpu.kDirect *
+                         (fclVars[1].Q_cla.idErr * pMotor->D_cpu.cosWTs -
+                          fclVars[1].Q_cla.iqErr * pMotor->D_cpu.sinWTs) +
+                          pMotor->D_cpu.carryOver ;
+
+    CLAMP_MACRO(pMotor->pi_id);
+
+    piidc = pMotor->pi_id.out * park1Cosine;
+    piids = pMotor->pi_id.out * park1Sine;
+
+    //
+    //  Wait for CMPLX IQ calc in CLA task 7 to complete
+    //
+    // SETGPIO18_HIGH;      // only for debug
+    while((HWREGH(PIECTRL_BASE + PIE_O_IFR11) & PIE_IFR11_INTX7) == false);
+    // SETGPIO18_LOW;       // only for debug
+
+    //
+    //  Perform the inverse park and connect inputs of the SVGEN_DQ module
+    //
+    svgen2.Ualpha = ( piidc - (fclVars[1].pi_iq.out * park1Sine)) *
+            pMotor->FCL_params.carrierMid;
+
+    svgen2.Ubeta = ((fclVars[1].pi_iq.out * park1Cosine) + piids) *
+            pMotor->FCL_params.cmidsqrt3;
+
+    //
+    //  MACRO to :-
+    //      1. do SVGEN
+    //      2. do PWMupdates
+    //
+    FCL_SVGEN_PWM_PDATE_MACRO();
+
+    READ_FCL_COUNT_M2;
+
+    return;
+}
+
+//
+// Wrap up function to be called by the user application at the completion of
+// Fast Current Loop in Complex Control Mode
+//
+#pragma CODE_ALIGN(FCL_runComplexCtrlWrap_M2, 2)
+#pragma FUNCTION_OPTIONS(FCL_runComplexCtrlWrap_M2, "--auto_inline")
+#pragma FUNCTION_OPTIONS(FCL_runComplexCtrlWrap_M2, "--opt_for_speed")
+
+void FCL_runComplexCtrlWrap_M2(MOTOR_Vars_t *pMotor)
+{
+    float32_t Vbase    = pMotor->FCL_params.Vdcbus * 1.15 / 2;
+    float32_t invZbase = pMotor->FCL_params.Ibase / Vbase;
+
+    float32_t WTs      = pMotor->speed.Speed *
+            pMotor->FCL_params.Wbase * pMotor->FCL_params.tSamp;
+
+    //
+    //  CLA_forceTasks(CLA1_BASE, CLA_TASKFLAG_8);
+    //
+    Cla1ForceTask8();           // CLA task8
+
+    pMotor->D_cpu.cosWTs  = __cos(WTs);
+    fclVars[1].Q_cla.cosWTs = pMotor->D_cpu.cosWTs;
+
+    pMotor->D_cpu.sinWTs  = __sin(WTs);
+    fclVars[1].Q_cla.sinWTs = pMotor->D_cpu.sinWTs;
+
+    pMotor->D_cpu.expVal =
+            expf(-(pMotor->FCL_params.Rd / pMotor->FCL_params.Ld) *
+                 pMotor->FCL_params.tSamp);
+
+    fclVars[1].Q_cla.expVal =
+            expf(-(pMotor->FCL_params.Rq / pMotor->FCL_params.Lq) *
+                 pMotor->FCL_params.tSamp);
+
+    pMotor->D_cpu.kDirect = pMotor->FCL_params.Rd * invZbase *
+            __sqrt(2.0F - 2.0F * __cos(pMotor->FCL_params.wccD *
+                                       pMotor->FCL_params.tSamp)) /
+                                       (1.0F - pMotor->D_cpu.expVal);
+
+    fclVars[1].Q_cla.kDirect = pMotor->FCL_params.Rq * invZbase *
+            __sqrt(2.0F - 2.0F * __cos(pMotor->FCL_params.wccQ *
+                                       pMotor->FCL_params.tSamp)) /
+                                       (1.0F - fclVars[1].Q_cla.expVal);
+
+    //
+    // To save CPU cycles and speed up calcn, carry over math is done within
+    //    this wrap function and 'carryOver' carries it to the next iteration
+    // Bemf calc is rolled in to the Q calcs as the speed and flux does not
+    //    change much between iterations - equation tweaked to fit here
+    //
+    pMotor->D_cpu.carryOver = -(pMotor->D_cpu.kDirect *
+            fclVars[1].Q_cla.idErr * pMotor->D_cpu.expVal);
+
+    fclVars[1].Q_cla.carryOver = -(fclVars[1].Q_cla.kDirect *
+            fclVars[1].Q_cla.iqErr * fclVars[1].Q_cla.expVal) +
+                    (pMotor->FCL_params.BemfK *
+                         (pMotor->speed.Speed - fclVars[1].speedWePrev));
+
+    fclVars[1].speedWePrev = pMotor->speed.Speed;
+
+    //
+    // to pass on the id and iq current feedback back to user,
+    // update them in the wrap function
+    //
+    pMotor->pi_id.fbk = pMotor->pi_id.ref - fclVars[1].Q_cla.idErr;
+
+    fclVars[1].pi_iq.fbk = fclVars[1].pi_iq.ref -
+            fclVars[1].Q_cla.iqErr;
+
+    //
+    // give enough time before clearing INTx8 for CLA TASK 8 completion
+    //
+    while((HWREGH(PIECTRL_BASE + PIE_O_IFR11) & PIE_IFR11_INTX8) == false);
+
+    //
+    // clear CLA task flags 5, 7 and 8
+    //
+    HWREGH(PIECTRL_BASE + PIE_O_IFR11) &= ~(PIE_IFR11_INTX5 |
+                                            PIE_IFR11_INTX7 |
+                                            PIE_IFR11_INTX8 );
+    return;
+}
+
+//
+// end of this file
+//
