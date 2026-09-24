@@ -9,13 +9,6 @@
 // Target Family: F2837x/F28004x
 //
 //#############################################################################
-// $TI Release: MotorControl SDK v2.01.00.00 $
-// $Release Date: Mon Nov 11 15:18:10 CST 2019 $
-// $Copyright:
-// Copyright (C) 2017-2019 Texas Instruments Incorporated
-//
-//     http://www.ti.com/ ALL RIGHTS RESERVED
-// $
 //#############################################################################
 
 #ifndef DUAL_AXIS_SERVO_DRIVE_H

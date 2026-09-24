@@ -6,13 +6,6 @@
 // Target Family:  F2837x/F2838x/F28004x
 //
 //#############################################################################
-// $TI Release: MotorControl SDK v2.01.00.00 $
-// $Release Date: Mon Nov 11 15:18:07 CST 2019 $
-// $Copyright:
-// Copyright (C) 2017-2019 Texas Instruments Incorporated
-//
-//     http://www.ti.com/ ALL RIGHTS RESERVED
-// $
 //#############################################################################
 
 #ifndef FCL_CPU_CLA_DM_H

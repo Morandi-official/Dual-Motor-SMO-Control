@@ -3,13 +3,6 @@
 // FILE:    dual_axis_f2837x_ram_lnk_cpu1.cmd.cmd
 //
 //#############################################################################
-// $TI Release: MotorControl SDK v2.01.00.00 $
-// $Release Date: Mon Nov 11 15:18:13 CST 2019 $
-// $Copyright:
-// Copyright (C) 2017-2019 Texas Instruments Incorporated
-//
-//     http://www.ti.com/ ALL RIGHTS RESERVED
-// $
 //#############################################################################
 // In addition to this memory linker command file,
 // add the header linker command file directly to the project.
